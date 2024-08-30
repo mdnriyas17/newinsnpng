@@ -125,6 +125,7 @@ const Menu = styled.ul`
     flex-direction: column;
     width: 100%;
     gap: 0;
+    background-color: white;
     max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;

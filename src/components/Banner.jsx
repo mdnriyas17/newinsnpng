@@ -62,7 +62,7 @@ const AboutUsContainer = styled.div`
 
 const Content = styled.div`
   flex: 1;
-  
+  padding-right: 40px;
   text-align: left;
 `;
 
