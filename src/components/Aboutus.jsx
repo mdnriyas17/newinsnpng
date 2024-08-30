@@ -80,7 +80,6 @@ export const Content = styled.div`
 
 export const SectionTitle = styled.h4`
   font-size: 1.5rem;
-  color: ;
   margin-bottom: 10px;
 `;
 
@@ -113,6 +112,7 @@ export const Maindiv = styled.div`
 `;
 
 export const UnorderList = styled.ul`
+  list-style-type: none;
   padding: 0;
   margin: 0;
 `;
