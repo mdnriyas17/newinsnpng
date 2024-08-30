@@ -1,0 +1,227 @@
+import React from "react";
+import styled from "styled-components";
+import {
+  FacebookOutlined,
+  InstagramOutlined,
+  TwitterOutlined,
+  LinkedinOutlined,
+} from "@ant-design/icons";
+import Logo from "../../public/large.png";
+const Footer = () => {
+  return (
+    <FooterContainer id="Contact">
+      <FooterContent>
+        <FooterSection>
+          <FooterLogo>
+            <img src={Logo} alt="logo" />
+            <a href="#" style={{ textDecoration: "none" }}>
+              <CompanyName>NPNG Tech</CompanyName>
+            </a>
+          </FooterLogo>
+          <FooterDescription>
+            It is an activity in which a customer browses the available good
+            services presented retailers.{" "}
+          </FooterDescription>
+          <SocialIcons>
+            <SocialIcon
+              href="https://www.facebook.com/profile.php?id=61551830191994&amp;mibextid=ZbWKwL"
+              target="_blank"
+            >
+              <FacebookOutlined />
+            </SocialIcon>
+            <SocialIcon
+              href="https://www.instagram.com/npng_in?utm_source=qr&amp;r=nametag"
+              target="_blank"
+            >
+              <InstagramOutlined />
+            </SocialIcon>
+            <SocialIcon
+              href="https://www.linkedin.com/company/npngoffical/"
+              target="_blank"
+            >
+              <LinkedinOutlined />
+            </SocialIcon>
+          </SocialIcons>
+        </FooterSection>
+
+        <FooterSection>
+          <FooterTitle>PRODUCTS</FooterTitle>
+          <FooterLinks>
+            <FooterLink href="/">Categories</FooterLink>
+            <FooterLink href="/about">Elements</FooterLink>
+            <FooterLink href="/services">Popular</FooterLink>
+            <FooterLink href="/contact">Sale</FooterLink>
+          </FooterLinks>
+        </FooterSection>
+
+        <FooterSection>
+          <FooterTitle>COMPANY</FooterTitle>
+          <FooterLinks>
+            <FooterLink href="/">About</FooterLink>
+            <FooterLink href="/about">News</FooterLink>
+            <FooterLink href="/services">Careers</FooterLink>
+            <FooterLink href="/contact">Services</FooterLink>
+          </FooterLinks>
+        </FooterSection>
+
+        <FooterSection>
+          <FooterTitle>Contact Us</FooterTitle>
+          <FooterContact>
+            <ContactItem>Email: contact@npngtech.com</ContactItem>
+            <ContactItem>Phone: +91 123 456 7890</ContactItem>
+            <ContactItem>
+              Address: 1245 Rang Road, Medical, E152 95RB
+            </ContactItem>
+          </FooterContact>
+        </FooterSection>
+      </FooterContent>
+
+      <FooterBottom>
+        <p>&copy; 2024 NPNG Tech. All rights reserved.</p>
+      </FooterBottom>
+    </FooterContainer>
+  );
+};
+
+export default Footer;
+
+const FooterContainer = styled.footer`
+  color: black;
+  padding: 40px 20px;
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+const FooterSection = styled.div`
+  flex: 1;
+  padding: 10px;
+  min-width: 220px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+`;
+
+const FooterLogo = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const CompanyName = styled.h2`
+font-family: "JejuGothic";
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+const FooterDescription = styled.p`
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
+const FooterTitle = styled.h3`
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: rgba(255, 72, 2, 1);
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+`;
+
+const FooterLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FooterLink = styled.a`
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+  color: black;
+  &:hover {
+    color: #f98866;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
+const SocialIcons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const SocialIcon = styled.a`
+  font-size: 24px;
+  color: black;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #f98866;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
+`;
+
+const FooterContact = styled.div`
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+`;
+
+const ContactItem = styled.p`
+  margin-bottom: 10px;
+`;
+
+const FooterBottom = styled.div`
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+  }
+`;
