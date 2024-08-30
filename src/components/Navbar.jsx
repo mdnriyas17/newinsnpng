@@ -68,7 +68,6 @@ const Nav = styled.nav`
   font-style: normal;
   width: 100%;
   padding: 0 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -132,16 +131,13 @@ const MenuItem = styled.li`
     position: relative;
     padding-bottom: 2px;
 
-    &:hover {
-      color: #f98866;
-    }
+   
 
     &:after {
       content: "";
       display: block;
       width: 0;
       height: 2px;
-      // background-color: #f98866;
       transition: width 0.3s;
       position: absolute;
       bottom: 0;
@@ -153,7 +149,6 @@ const MenuItem = styled.li`
     }
 
     &.active {
-      color: #f98866;
       border-bottom: 1px solid rgba(10, 13, 80, 1);
     }
 

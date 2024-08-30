@@ -20,7 +20,7 @@ const Ourservicepage = () => {
       id: 1,
       title: "Mobile app Development",
       describtion:
-        "Elevate your business with our custom mobile applications, engineered for intuitive user experiences.",
+        "Elevate your business with our custom mobile applications, engineered for intuitive user experiences, seamless functionality, and lasting impact on the go.",
       image: <FaMobileScreen />,
       button: {
         text: "Read More →",
@@ -31,7 +31,7 @@ const Ourservicepage = () => {
       id: 2,
       title: "Web App Development",
       describtion:
-        "Transforming your ideas into powerful web applications development, responsive design, reliable support.",
+        "Transforming your ideas into powerful web applications with custom development, responsive design, and reliable support, we drive your digital success at NPNG TECH",
       image: <SiAmazonwebservices />,
       button: {
         text: "Read More →",
@@ -42,7 +42,7 @@ const Ourservicepage = () => {
       id: 3,
       title: "Ui/Ux Designs",
       describtion:
-        "From sleek and intuitive UI/UX designs to user experiences ensuring optimal digita interaction.",
+        "From sleek and intuitive UI/UX designs to seamless user experiences, we elevate your web applications to captivate and engage users, ensuring optimal digital interaction.",
       image: <HiOutlineBuildingOffice2 />,
       button: {
         text: "Read More →",
@@ -53,7 +53,7 @@ const Ourservicepage = () => {
       id: 4,
       title: "E-Commerce Application",
       describtion:
-        "Empower your online business with tailored e- commerce applications, designed transaction, customer growth. ",
+        "Empower your online business with our tailored e-commerce applications, designed for seamless transactions, enhanced customer experiences, and scalable growth.",
       image: <LiaIntercom />,
       button: {
         text: "Read More →",
@@ -64,7 +64,7 @@ const Ourservicepage = () => {
       id: 5,
       title: "Digital Marketing",
       describtion:
-        "Combined with higher consumer knowledge and the demand for more sophisticated consumer.",
+        "Revolutionize your business operations with our POS software solutions, delivering seamless transactions, robust inventory management, and enhanced customer experiences.",
       image: <TfiCommentAlt />,
       button: {
         text: "Read More →",
@@ -75,7 +75,7 @@ const Ourservicepage = () => {
       id: 6,
       title: "Management Systems",
       describtion:
-        "Streamline your business operations with our comperhensive management system insighful analytics.",
+        "Streamline your business operations with our comprehensive management system, offering efficient workflows, insightful analytics, and seamless collaboration for optimized performance.",
       image: <RiCustomerService2Line />,
       button: {
         text: "Read More →",
@@ -182,7 +182,9 @@ const ServiceItem = styled.div`
 
 const ServiceImage = styled.div`
   font-size: 2rem;
-  color: #f98866;
+  color: rgba(10, 13, 80, 1);
+  background-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
   margin-bottom: 20px;
 `;
 

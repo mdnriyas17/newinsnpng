@@ -19,8 +19,8 @@ const Footer = () => {
             </a>
           </FooterLogo>
           <FooterDescription>
-            It is an activity in which a customer browses the available good
-            services presented retailers.{" "}
+            Have an idea or an epic project in mind? Talk to us. Let's work
+            together and make something great. Drop us a line at
           </FooterDescription>
           <SocialIcons>
             <SocialIcon
@@ -132,7 +132,7 @@ const FooterLogo = styled.div`
 `;
 
 const CompanyName = styled.h2`
-font-family: "JejuGothic";
+  font-family: "JejuGothic";
   font-size: 24px;
   font-weight: bold;
   color: black;
@@ -144,7 +144,6 @@ font-family: "JejuGothic";
 const FooterDescription = styled.p`
   font-size: 16px;
   line-height: 1.5;
-  text-align: left;
   @media (max-width: 768px) {
     font-size: 14px;
   }
@@ -181,7 +180,7 @@ const FooterLink = styled.a`
 const SocialIcons = styled.div`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   gap: 20px;
   @media (max-width: 768px) {
     justify-content: center;

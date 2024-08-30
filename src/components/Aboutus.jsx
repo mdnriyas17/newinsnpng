@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Image1 from "../../public/about.jpeg";
+import Image1 from "../../public/About1.png";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
@@ -17,18 +17,16 @@ const AboutUs = () => {
         <SectionTitle> <Highlighted>A</Highlighted>bout Us</SectionTitle>
         <MainTitle>Get Started Easily With NPNG</MainTitle>
         <Description>
-          NPNG we are your trusted partner for all your IT needs. Our expert
-          team specializes in crafting custom website solutions that are bot
-          visually stunning and highly functional.
+        At NPNG, we're more than just a web design and development company - we're pioneers of exceptional digital experiences. With a steadfast commitment to quality and service, we've assembled a dedicated team of experts who consistently exceed expectations and deliver outstanding results.
         </Description>
         <Maindiv>
           <UnorderList>
-            <ListItem>Expert trainers</ListItem>
-            <ListItem>Lifetime accesss</ListItem>
+            <ListItem>Innovation and Collaborations</ListItem>
+            <ListItem>Tailored Strategies</ListItem>
           </UnorderList>
           <UnorderList>
-            <ListItem>Online Learning</ListItem>
-            <ListItem>Great Results</ListItem>
+            <ListItem>Transparency and Communication</ListItem>
+            <ListItem>Community Engagement and Sustainability</ListItem>
           </UnorderList>
         </Maindiv>
         <ActionButton>Learn More</ActionButton>
@@ -63,7 +61,6 @@ export const ImageContainer = styled.div`
     height: auto;
     max-width: 500px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
     image-resolution: 500px;
     @media (max-width: 768px) {

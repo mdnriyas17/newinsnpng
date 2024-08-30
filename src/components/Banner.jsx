@@ -2,10 +2,9 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Image1 from "../../public/Programming.png";
 import Aos from "aos";
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
 
 const Banner = () => {
-
   useEffect(() => {
     Aos.init();
   }, []);
@@ -17,13 +16,11 @@ const Banner = () => {
         </StyledTitle>
         <MainTitle>A better learning Journey future start</MainTitle>
         <Description>
-          NPNG is the best place to learn IT courses in chennai. We having top
-          level of mentors, practical classes, 100% placement assistance etc.,
-          Join our courses.
+          We provide creative solutions to turn your ideas into digital reality.
         </Description>
         <ActionButton>Get Started</ActionButton>
       </Content>
-      <ImageContainer data-aos="fade-up"  data-aos-duration="1000">
+      <ImageContainer data-aos="fade-up" data-aos-duration="1000">
         <img src={Image1} alt="About Us" />
       </ImageContainer>
     </AboutUsContainer>
@@ -37,7 +34,7 @@ const AboutUsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
-  padding: 100px 0px;
+  padding: 50px 0px;
   margin: 0 auto;
   width: 100%;
 
@@ -72,6 +69,7 @@ const Content = styled.div`
 const StyledTitle = styled.h2`
   font-size: 2rem;
   color: #f98866;
+  font-family: "Roboto Slab";
   margin-bottom: 10px;
 `;
 
