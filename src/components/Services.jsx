@@ -62,7 +62,7 @@ const Ourservicepage = () => {
     },
     {
       id: 5,
-      title: "Digital Marketing",
+      title: "POS Softwares",
       describtion:
         "Revolutionize your business operations with our POS software solutions, delivering seamless transactions, robust inventory management, and enhanced customer experiences.",
       image: <TfiCommentAlt />,
