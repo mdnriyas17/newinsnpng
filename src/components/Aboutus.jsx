@@ -115,6 +115,12 @@ export const UnorderList = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-left: 20px;
+  }
 `;
 
 export const ListItem = styled.li`
