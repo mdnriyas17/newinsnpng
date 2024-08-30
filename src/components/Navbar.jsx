@@ -26,75 +26,90 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <a href="#" style={{ textDecoration: "none" }}>
-        <Logo>
-          <img src={Logo1} alt="logo" />
-          <span style={{fontFamily:"JejuGothic"}}>NPNG Tech</span>
-        </Logo>
-      </a>
-      <Hamburger onClick={toggleMenu}>
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </Hamburger>
-      <Menu isOpen={isOpen}>
-        {navlist.map((item, index) => (
-          <MenuItem key={index}>
-            <a
-              href={item.link}
-              className={activeIndex === index ? "active" : ""}
-              onClick={() => handleLinkClick(index)}
-            >
-              {item.name}
-            </a>
-          </MenuItem>
-        ))}
-      </Menu>
-      <SignupButton>
-        <Link style={{ textDecoration: "none", color: "inherit" }} to="/signup">
-          Sign Up
-        </Link>
-      </SignupButton>
+      <Container>
+        <a href="#" style={{ textDecoration: "none" }}>
+          <Logo>
+            <img src={Logo1} alt="logo" />
+            <span>NPNG Tech</span>
+          </Logo>
+        </a>
+        <Hamburger onClick={toggleMenu}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </Hamburger>
+        <Menu isOpen={isOpen}>
+          {navlist.map((item, index) => (
+            <MenuItem key={index}>
+              <a
+                href={item.link}
+                className={activeIndex === index ? "active" : ""}
+                onClick={() => handleLinkClick(index)}
+              >
+                {item.name}
+              </a>
+            </MenuItem>
+          ))}
+        </Menu>
+        <SignupButton>
+          <Link style={{ textDecoration: "none", color: "inherit" }} to="/signup">
+            Sign Up
+          </Link>
+        </SignupButton>
+      </Container>
     </Nav>
   );
 };
 
 export default Navbar;
 
+// Styled Components
 const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: black;
-  height: 60px;
-  font-style: normal;
   width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
+  background-color: white;
+  color: black;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
-  z-index: 1000;
-  background-color: white;
+  padding: 10px 0;
+`;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
 `;
 
 const Logo = styled.div`
   display: flex;
   align-items: center;
+
   img {
-    height: 40px;
-    width: 40px;
+    width: 50px;
+    height: auto;
     margin-right: 10px;
   }
+
   span {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: black;
+    font-size: 1.5rem;
+    color: rgba(10, 13, 80, 1);
+    font-family: "JejuGothic";
   }
 `;
 
 const Hamburger = styled.div`
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  color: rgba(10, 13, 80, 1);
   cursor: pointer;
+
   @media (max-width: 768px) {
     display: block;
   }
@@ -102,82 +117,57 @@ const Hamburger = styled.div`
 
 const Menu = styled.ul`
   display: flex;
-  gap: 20px;
-  color: black;
   list-style: none;
   padding: 0;
-  margin: 0;
-
+  gap: 50px;
   @media (max-width: 768px) {
-    display: ${({ isOpen }) => (isOpen ? "block" : "none")};
-    position: absolute;
-    top: 60px;
-    left: 0;
+    flex-direction: column;
     width: 100%;
-    background: white;
-    padding: 20px;
-    text-align: center;
-    z-index: 999;
+    gap: 0;
+    max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
   }
 `;
 
 const MenuItem = styled.li`
-  list-style: none;
-
+  margin-left: 20px;
   a {
     text-decoration: none;
-    font-size: 1rem;
     color: black;
-    position: relative;
-    padding-bottom: 2px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 
-   
 
-    &:after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: 0;
-      left: 0;
+    &:hover {
+      color: #f09d51;
     }
+  }
 
-    &:hover:after {
-      width: 100%;
-    }
+  @media (max-width: 768px) {
+    margin: 10px 0;
 
-    &.active {
-      border-bottom: 1px solid rgba(10, 13, 80, 1);
-    }
-
-    &.active:after {
-      width: 100%;
-    }
-
-    @media (max-width: 768px) {
-      display: block;
-      padding: 10px 0;
+    a {
+      font-size: 1.2rem;
     }
   }
 `;
 
-const SignupButton = styled.button`
-  background-color: transparent;
-  border: 1px solid rgba(10, 13, 80, 1);
-  padding: 10px 20px;
+const SignupButton = styled.div`
+  background-color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
   color: rgba(10, 13, 80, 1);
-  border-radius: 5px;
-  margin-left: 20px;
   cursor: pointer;
-
+  transition: background-color 0.3s ease;
+  border: 1px solid rgba(10, 13, 80, 1);
   &:hover {
-    background-color: rgba(10, 13, 80, 1);
-    color: white;
+    background-color: #e57b26;
   }
 
   @media (max-width: 768px) {
     display: none;
   }
+
 `;

@@ -14,7 +14,7 @@ const Banner = () => {
         <StyledTitle>
           <Highlighted>For</Highlighted> the Courses of your explore
         </StyledTitle>
-        <MainTitle>A better learning Journey future start</MainTitle>
+        <MainTitle>Transforming Ideas into Digital Reality with Creative Solutions</MainTitle>
         <Description>
           We provide creative solutions to turn your ideas into digital reality.
         </Description>
