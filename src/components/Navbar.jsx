@@ -70,7 +70,8 @@ const Nav = styled.nav`
   z-index: 10;
   top: 0;
   left: 0;
-  padding: 10px 0;
+  height: 70px;
+  padding: 10px 0 0 0;
 `;
 
 const Container = styled.div`

@@ -41,7 +41,7 @@ const Mainbanner = styled.div`
   padding: 20px;
   text-align: center;
   max-width: 1200px;
-  margin: 100px auto 0 auto;
+  margin: 20px auto 0 auto;
   box-sizing: border-box;
   @media (max-width: 768px) {
     flex-direction: column;

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Image1 from "../../public/About1.png";
+import Image1 from "../../public/about.jpeg";
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
@@ -44,7 +44,7 @@ export const AboutUsContainer = styled.div`
   margin: 0 auto;
   width: 100%;
   justify-content: space-between;
-  padding: 50px 20px;
+  padding: 20px;
   box-sizing: border-box;
   color: #f98866;
 

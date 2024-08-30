@@ -46,7 +46,7 @@ const AboutUsContainer = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-
+    padding: 10;
     max-width: 730px;
   }
   @media (max-width: 425px) {
@@ -62,7 +62,7 @@ const AboutUsContainer = styled.div`
 
 const Content = styled.div`
   flex: 1;
-  padding-right: 40px;
+  
   text-align: left;
 `;
 

@@ -44,7 +44,7 @@ const AboutUsContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  padding: 100px 0px;
+  padding: 20px 0px;
   margin: 0 auto;
   @media (max-width: 1024px) {
     width: 100%;

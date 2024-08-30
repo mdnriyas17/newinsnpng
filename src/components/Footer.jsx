@@ -87,7 +87,7 @@ export default Footer;
 
 const FooterContainer = styled.footer`
   color: black;
-  padding: 40px 20px;
+  padding: 20px;
 `;
 
 const FooterContent = styled.div`
@@ -109,10 +109,6 @@ const FooterSection = styled.div`
   flex: 1;
   padding: 10px;
   min-width: 220px;
-
-  @media (max-width: 768px) {
-    margin-bottom: 20px;
-  }
 `;
 
 const FooterLogo = styled.div`
@@ -151,7 +147,6 @@ const FooterDescription = styled.p`
 
 const FooterTitle = styled.h3`
   font-size: 20px;
-  margin-bottom: 15px;
   color: rgba(255, 72, 2, 1);
   @media (max-width: 768px) {
     font-size: 18px;
