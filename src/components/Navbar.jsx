@@ -26,12 +26,12 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <Link to="/" style={{ textDecoration: "none" }}>
+      <a href="#" style={{ textDecoration: "none" }}>
         <Logo>
           <img src={Logo1} alt="logo" />
           <span style={{fontFamily:"JejuGothic"}}>NPNG Tech</span>
         </Logo>
-      </Link>
+      </a>
       <Hamburger onClick={toggleMenu}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </Hamburger>
