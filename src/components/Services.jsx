@@ -91,6 +91,9 @@ const Ourservicepage = () => {
           Popul<Highlighted>ar Se</Highlighted>rvices
         </h2>
         <h1>Services to your business growth</h1>
+        <p >
+        Discover how our personalized solutions can help your business thrive. From strategic planning to execution, make your journey to success smoother and more rewarding.
+        </p>
       </SectionTitle>
       <ServiceList>
         {ourservices.map((ourservice, index) => (
@@ -105,9 +108,6 @@ const Ourservicepage = () => {
             <ServiceContent>
               <h3>{ourservice.title}</h3>
               <p>{ourservice.describtion}</p>
-              <StyledLink to={ourservice.button.link}>
-                <ServiceButton>{ourservice.button.text}</ServiceButton>
-              </StyledLink>
             </ServiceContent>
           </ServiceItem>
         ))}
@@ -156,6 +156,14 @@ const SectionTitle = styled.div`
     font-size: 3rem;
     margin: 0;
   }
+
+  p {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 800px; /* Adjust this value as needed */
+    line-height: 1.5; /* Adjust line-height to control spacing */
+  }
 `;
 
 const Highlighted = styled.span`
@@ -164,7 +172,7 @@ const Highlighted = styled.span`
 
 const ServiceList = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 `;
 
@@ -182,7 +190,7 @@ const ServiceItem = styled.div`
 
 const ServiceImage = styled.div`
   font-size: 2rem;
-  color: rgba(10, 13, 80, 1);
+  color: #f98866;
   background-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   margin-bottom: 20px;
@@ -190,6 +198,7 @@ const ServiceImage = styled.div`
 
 const ServiceContent = styled.div`
   margin-top: 20px;
+  text-align: center; /* Center align text within the container */
 
   h3 {
     font-size: 1.5rem;
@@ -198,9 +207,37 @@ const ServiceContent = styled.div`
   }
 
   p {
-    font-size: 1rem;
+    font-size: 16px;
     color: #666;
-    margin-bottom: 20px;
+      font-weight: 400;
+    text-align: center;
+    padding: 0 60px;
+    margin: 0 auto 20px; /* Center align paragraph and add bottom margin */
+    max-width: 600px; /* Optional: limit width for better readability */
+    line-height: 1.6; /* Improve readability */
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    h3 {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    p {
+      font-size: 0.9rem; /* Adjust font size for smaller screens */
+      max-width: 90%; /* Increase max-width on smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    h3 {
+      font-size: 1rem; /* Further adjust font size for very small screens */
+    }
+
+    p {
+      font-size: 0.8rem; /* Further adjust font size for very small screens */
+      max-width: 100%; /* Allow paragraph to use full width */
+    }
   }
 `;
 

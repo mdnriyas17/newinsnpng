@@ -29,7 +29,10 @@ const AboutUs = () => {
             <ListItem>Community Engagement and Sustainability</ListItem>
           </UnorderList>
         </Maindiv>
+        <a href="#Home">
         <ActionButton>Learn More</ActionButton>
+
+        </a>
       </Content>
     </AboutUsContainer>
   );
@@ -107,14 +110,16 @@ export const Description = styled.p`
 export const Maindiv = styled.div`
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin-bottom: 30px;
+      align-items: center;
+
 `;
 
 export const UnorderList = styled.ul`
-  list-style-type: none;
+  list-style-type: "✅";
   padding: 0;
   margin: 0;
+  text-align: left;
   @media (max-width: 768px) {
     margin-bottom: 20px;
     font-size: 1.2rem;

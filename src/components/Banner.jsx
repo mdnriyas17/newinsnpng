@@ -9,16 +9,22 @@ const Banner = () => {
     Aos.init();
   }, []);
   return (
-    <AboutUsContainer>
+    <AboutUsContainer id="Home">
       <Content>
         <StyledTitle>
-          <Highlighted>For</Highlighted> the Courses of your explore
+          <Highlighted>Sha</Highlighted>ping Ideas into Digital Excellence
         </StyledTitle>
         <MainTitle>Transforming Ideas into Digital Reality with Creative Solutions</MainTitle>
         <Description>
           We provide creative solutions to turn your ideas into digital reality.
         </Description>
-        <ActionButton>Get Started</ActionButton>
+          <a href="#Home">
+          <ActionButton>
+
+          Get Started
+          </ActionButton>
+
+          </a>
       </Content>
       <ImageContainer data-aos="fade-up" data-aos-duration="1000">
         <img src={Image1} alt="About Us" />

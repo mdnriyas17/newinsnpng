@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import styled from 'styled-components';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import React, { useEffect } from "react";
+import styled from "styled-components";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Subbanner = () => {
   useEffect(() => {
     Aos.init();
@@ -9,19 +9,19 @@ const Subbanner = () => {
   return (
     <Mainbanner data-aos="fade-up" data-aos-duration="1000">
       <Stat>
-        <Number>140+</Number>
+        <Number>10+</Number>
         <Text>Current Clients</Text>
       </Stat>
       <Stat>
-        <Number>80+</Number>
+        <Number>15+</Number>
         <Text>Employees</Text>
       </Stat>
       <Stat>
-        <Number>200+</Number>
+        <Number>15+</Number>
         <Text>Task Completed</Text>
       </Stat>
       <Stat>
-        <Number>30K</Number>
+        <Number>5K</Number>
         <Text>New Followers</Text>
       </Stat>
     </Mainbanner>
@@ -36,7 +36,12 @@ const Mainbanner = styled.div`
   align-items: center;
   height: 250px;
   width: 100%;
-  background: linear-gradient(91.62deg, #3F43A7 14.01%, #787DE6 74.38%, #888CD5 125.76%);
+  background: linear-gradient(
+    91.62deg,
+    #3f43a7 14.01%,
+    #787de6 74.38%,
+    #888cd5 125.76%
+  );
   color: white;
   padding: 20px;
   text-align: center;

@@ -30,7 +30,7 @@ const Footer = () => {
               <FacebookOutlined />
             </SocialIcon>
             <SocialIcon
-              href="https://www.instagram.com/npng_in?utm_source=qr&amp;r=nametag"
+              href="https://www.instagram.com/npng_tech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
               target="_blank"
             >
               <InstagramOutlined />
@@ -43,7 +43,7 @@ const Footer = () => {
             </SocialIcon>
           </SocialIcons>
         </FooterSection>
-
+        {/* 
         <FooterSection>
           <FooterTitle>PRODUCTS</FooterTitle>
           <FooterLinks>
@@ -52,25 +52,30 @@ const Footer = () => {
             <FooterLink href="/services">Popular</FooterLink>
             <FooterLink href="/contact">Sale</FooterLink>
           </FooterLinks>
-        </FooterSection>
+        </FooterSection> */}
 
         <FooterSection>
-          <FooterTitle>COMPANY</FooterTitle>
+          <FooterTitle>Quick Links</FooterTitle>
           <FooterLinks>
-            <FooterLink href="/">About</FooterLink>
-            <FooterLink href="/about">News</FooterLink>
-            <FooterLink href="/services">Careers</FooterLink>
-            <FooterLink href="/contact">Services</FooterLink>
+            <FooterLink href="#Home">Home</FooterLink>
+            <FooterLink href="#About">About</FooterLink>
+            <FooterLink href="#Services">Services</FooterLink>
+            <FooterLink href="#Contact">Contact</FooterLink>
           </FooterLinks>
         </FooterSection>
 
         <FooterSection>
           <FooterTitle>Contact Us</FooterTitle>
           <FooterContact>
-            <ContactItem>Email: contact@npngtech.com</ContactItem>
-            <ContactItem>Phone: +91 123 456 7890</ContactItem>
+            <a href="mailto:hello@npng.in" style={{ textDecoration: "none", color: "black" }}>
+              <ContactItem>Email:hello@npng.in</ContactItem>
+            </a>
+            <a href="tel: +91 7200168369" style={{ textDecoration: "none", color: "black" }}>
+              <ContactItem>Phone: +91 7200168369</ContactItem>
+            </a>
             <ContactItem>
-              Address: 1245 Rang Road, Medical, E152 95RB
+              Address: No 18, 2nd St, Balakrishnapuram, Adambakkam, Ramapuram,
+              Chennai, Tamil Nadu 600088
             </ContactItem>
           </FooterContact>
         </FooterSection>

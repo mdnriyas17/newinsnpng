@@ -26,7 +26,10 @@ const Banner = () => {
           <ListItem>Expert trainers</ListItem>
           <ListItem>Lifetime accesss</ListItem>
         </UnorderList>
+        <a href="#Home">
+
         <ActionButton>Get a Quote</ActionButton>
+        </a>
       </Content>
       <ImageContainer data-aos="fade-down"   data-aos-easing="linear"
      data-aos-duration="1500">
