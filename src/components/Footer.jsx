@@ -24,7 +24,7 @@ const Footer = () => {
           </FooterDescription>
           <SocialIcons>
             <SocialIcon
-              href="https://www.facebook.com/profile.php?id=61551830191994&amp;mibextid=ZbWKwL"
+              href="https://www.facebook.com/profile.php?id=61556940022825&mibextid=ZbWKwL"
               target="_blank"
             >
               <FacebookOutlined />
@@ -36,7 +36,7 @@ const Footer = () => {
               <InstagramOutlined />
             </SocialIcon>
             <SocialIcon
-              href="https://www.linkedin.com/company/npngoffical/"
+              href="https://www.linkedin.com/in/npng-tech-8486602b6/"
               target="_blank"
             >
               <LinkedinOutlined />
