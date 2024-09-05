@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import { Route, Routes } from "react-router-dom";
 import Subbanner from "../components/Subbanner";
 import styled from "styled-components";
+import Enquiry from "../components/Enquiry";
 const Home = () => {
   return (
     <>
@@ -24,7 +25,10 @@ const Home = () => {
           <Midabout />
         </Section>
         <Section id="Contact">
+          <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#f98866" }}>Contact Us</h1>
+          <Enquiry/>
           <Footer />
+
         </Section>
     </>
   );

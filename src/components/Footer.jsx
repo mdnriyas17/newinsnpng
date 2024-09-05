@@ -36,7 +36,7 @@ const Footer = () => {
               <InstagramOutlined />
             </SocialIcon>
             <SocialIcon
-              href="https://www.linkedin.com/in/npng-tech-8486602b6/"
+              href="https://www.linkedin.com/company/npng-tech-work"
               target="_blank"
             >
               <LinkedinOutlined />
