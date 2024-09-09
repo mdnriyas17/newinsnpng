@@ -104,19 +104,23 @@ const Nav = styled.nav`
   left: 0;
   height: 70px;
   padding: 10px 0;
+  display: flex;
+  justify-content: center;
 `;
 
 const Container = styled.div`
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 
   @media (max-width: 768px) {
     padding: 0 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 `;
 
@@ -152,21 +156,22 @@ const Menu = styled.ul`
   display: flex;
   list-style: none;
   padding: 0;
-  gap: 50px;
+  margin: 0;
+  gap: 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     width: 100%;
-    gap: 0;
     background-color: white;
     max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    gap: 0;
+    padding: ${({ isOpen }) => (isOpen ? "10px 0" : "0")};
   }
 `;
 
 const MenuItem = styled.li`
-  position: relative;
   display: inline-block;
   margin-left: 20px;
 
@@ -188,29 +193,14 @@ const MenuItem = styled.li`
     }
   }
 
-  a::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25px;
-    height: 2px;
-    border-radius: 3px;
-    background-color: rgba(10, 13, 80, 1);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  a.active::after {
-    opacity: 1;
-  }
-
   @media (max-width: 768px) {
     margin: 10px 0;
+    width: 100%;
+    text-align: center;
 
     a {
       font-size: 1.2rem;
+      padding: 10px 0;
     }
   }
 `;
@@ -231,6 +221,9 @@ const SignupButton = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: none;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
   }
 `;
