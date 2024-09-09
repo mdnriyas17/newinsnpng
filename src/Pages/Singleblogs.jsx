@@ -1,100 +1,97 @@
-import Blogs from '../components/Blogsingle'
-import Navbar from '../components/Navbar'
+import Blogs from "../components/Blogsingle";
+import Navbar from "../components/Navbar";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo1 from "../../public/large.png";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-    import { useNavigate } from "react-router-dom";
-import Footer from '../components/Footer';
+import { useNavigate } from "react-router-dom";
+import Footer from "../components/Footer";
 const Blog = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-    const location = useLocation();
+  const location = useLocation();
 
-    useEffect(() => {
-        const sectionId = location.state?.sectionId;
-        if (sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-            }
-        }
-    }, [location]);
+  useEffect(() => {
+    const sectionId = location.state?.sectionId;
+    if (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-const handleLinkClick = (event, sectionId) => {
+  const handleLinkClick = (event, sectionId) => {
     event.preventDefault();
     console.log(sectionId);
     navigate("/", { state: { sectionId } });
-};
+  };
 
+  const navlist = [
+    { name: "Home", link: "Home" },
+    { name: "Blogs", navslink: "Blogs" },
+  ];
 
-    const navlist = [
-        { name: "Home", link: "Home" },
-        { name: "Blogs", navslink: "Blogs" },
-    ];
-
-    return (
-        <div style={{ padding: "50px 0", margin: "0 auto" }}>
-            <Nav>
-                <Container>
-                    <a href="#Home" style={{ textDecoration: "none" }}>
-                        <Logo>
-                            <img src={Logo1} alt="logo" />
-                            <span>NPNG Tech</span>
-                        </Logo>
-                    </a>
-                    <Hamburger onClick={toggleMenu}>
-                        {isOpen ? <FaTimes /> : <FaBars />}
-                    </Hamburger>
-                    <Menu isOpen={isOpen}>
-                        {navlist.map((item, index) => (
-                            <MenuItem key={index}>
-                                {item.link ? (
-                                    <a
-                                    className=''
-                                        href={`#${item.link}`}
-                                        onClick={(e) => handleLinkClick(e, item.link)}
-                                    >
-                                        {item.name}
-                                    </a>
-                                ) : (
-                                    <Link onClick={toggleMenu} to={`/${item.navslink}`}>
-                                        {item.name}
-                                    </Link>
-                                )}
-                            </MenuItem>
-                        ))}
-                    </Menu>
-                    <SignupButton>
-                        <a
-                            href="/signup"
-                            style={{ textDecoration: "none", color: "inherit" }}
-                        >
-                            Sign Up
-                        </a>
-                    </SignupButton>
-                </Container>
-            </Nav>
-            <Blogs />   
-            <Footer />
-        </div>
-    );
+  return (
+    <>
+      <Nav>
+        <Container>
+          <a href="#Home" style={{ textDecoration: "none" }}>
+            <Logo>
+              <img src={Logo1} alt="logo" />
+              <span>NPNG Tech</span>
+            </Logo>
+          </a>
+          <Hamburger onClick={toggleMenu}>
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </Hamburger>
+          <Menu isOpen={isOpen}>
+            {navlist.map((item, index) => (
+              <MenuItem key={index}>
+                {item.link ? (
+                  <a
+                    className=""
+                    href={`#${item.link}`}
+                    onClick={(e) => handleLinkClick(e, item.link)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link onClick={toggleMenu} to={`/${item.navslink}`}>
+                    {item.name}
+                  </Link>
+                )}
+              </MenuItem>
+            ))}
+          </Menu>
+          <SignupButton>
+            <a
+              href="/signup"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Sign Up
+            </a>
+          </SignupButton>
+        </Container>
+      </Nav>
+      <Blogs />
+      <Footer />
+    </>
+  );
 };
 
 export default Blog;
 
 // Styled Components
 // (Your styled-components code remains the same)
-
-
 
 // Styled Components
 const Nav = styled.nav`
