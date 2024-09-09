@@ -4,7 +4,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Logo1 from "../../public/large.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Blogs from "../components/Testimonial";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Blog = () => {
@@ -37,7 +36,7 @@ const Blog = () => {
   ];
 
   return (
-    <div style={{ padding: "50px 0", margin: "0 auto" }}>
+    <div>
       <Nav>
         <Container>
           <a href="#Home" style={{ textDecoration: "none" }}>
@@ -92,8 +91,6 @@ const Blog = () => {
 
 export default Blog;
 
-// Styled Components remain the same.
-
 // Styled Components
 const Nav = styled.nav`
   width: 100%;
@@ -105,6 +102,7 @@ const Nav = styled.nav`
   left: 0;
   height: 70px;
   padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 const Container = styled.div`

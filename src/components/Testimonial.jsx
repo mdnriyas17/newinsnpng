@@ -10,6 +10,7 @@ import image6 from "../assets/image6.png";
 import image7 from "../assets/image7.png";
 import image8 from "../assets/image8.png";
 import { Link } from "react-router-dom";
+
 const Blogsingle = () => {
   const data = [
     {
@@ -39,6 +40,7 @@ const Blogsingle = () => {
     }
     return text;
   };
+
   return (
     <div className="bg-white py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -48,37 +50,35 @@ const Blogsingle = () => {
               Our Blogs
             </h2>
             <p className="mt-4 text-lg text-gray-500">
-            Dive into a collection of insightful articles, updates, and expert perspectives on various topics. Stay informed and inspired with our latest posts, featuring rich content, engaging visuals, and valuable information to keep you ahead in your field.
+              Dive into a collection of insightful articles, updates, and expert perspectives on various topics. Stay informed and inspired with our latest posts, featuring rich content, engaging visuals, and valuable information to keep you ahead in your field.
             </p>
           </div>
           <div className="mt-10">
-      {data.map((section, index) => (
-        <Link to={`/blogs/${section.id}`} key={section.id}>
-          <div
-            className={`flex flex-col md:flex-row md:items-center mb-12 ${
-              index % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
-            }`}
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-          >
-            <div className="md:w-1/2 md:pl-8 mt-8 md:mt-0">
-              <img
-                src={section?.images}
-                alt={section?.title}
-                className="w-full h-auto"
-              />
-            </div>
-            <div className="md:w-1/2 md:pr-8">
-              <h3 className="text-2xl font-bold mb-4">
-                {section?.title}
-              </h3>
-              <p className="mt-4 text-lg text-gray-500">
-                {truncateText(section.description, 30)}
-              </p>
-            </div>
+            {data.map((section) => (
+              <Link to={`/blogs/${section.id}`} key={section.id}>
+                <div
+                  className="flex flex-col md:flex-row md:items-center mb-12"
+                  data-aos="fade-up"
+                >
+                  <div className="md:w-1/2 md:pr-8 mt-8 md:mt-0">
+                    <img
+                      src={section.images}
+                      alt={section.title}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </div>
+                  <div className="md:w-1/2 md:pl-8">
+                    <h3 className="text-4xl font-bold mb-4">
+                      {section.title}
+                    </h3>
+                    <p className="mt-4 text-lg text-gray-500">
+                      {truncateText(section.description, 30)}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
-        </Link>
-      ))}
-    </div>
         </div>
       </div>
     </div>
