@@ -95,13 +95,10 @@ const Blogsingle = () => {
   }
 
   return (
-    <div className="bg-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div className="bg-white pb-12 pt-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1
-            className="text-4xl font-extrabold text-gray-900"
-            data-aos="fade-up"
-          >
+          <h1 className="text-4xl font-extrabold text-gray-900" data-aos="fade-up">
             {blog?.title}
           </h1>
           <p className="mt-4 text-lg text-gray-600" data-aos="fade-up">
@@ -120,14 +117,16 @@ const Blogsingle = () => {
                   <img
                     src={section.images}
                     alt={section.title}
-                    className="w-full rounded-lg shadow-lg"
+                    className="w-full h-auto rounded-lg shadow-lg"
                   />
                 </div>
-                <div className="mt-6 md:mt-0 md:w-1/2">
+                <div className="mt-6 md:mt-0 md:w-1/2 md:pl-8">
                   <h2 className="text-2xl font-semibold text-blue-900 mb-4">
                     {section.title}
                   </h2>
-                  <p className="text-base text-gray-700">{section.content}</p>
+                  <p className="text-base text-gray-700">
+                    {section.content}
+                  </p>
                 </div>
               </div>
             ))}

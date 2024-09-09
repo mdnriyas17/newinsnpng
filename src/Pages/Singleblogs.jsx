@@ -111,7 +111,6 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
