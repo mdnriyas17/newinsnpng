@@ -2,99 +2,97 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo1 from "../../public/large.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import Blogs from "../components/Testimonial";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
-const Navbar = () => {
+const Blog = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll("nav div ul li a");
-      let current = "";
+    const sectionId = location.state?.sectionId;
+    if (sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
-      sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 70; // Adjust for fixed navbar height
-        const sectionHeight = section.clientHeight;
-        if (
-          window.scrollY >= sectionTop &&
-          window.scrollY < sectionTop + sectionHeight
-        ) {
-          current = section.getAttribute("id");
-        }
-      });
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-          link.classList.add("active");
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const handleLinkClick = (event, sectionId) => {
+    event.preventDefault();
+    navigate("/", { state: { sectionId } });
+  };
 
   const navlist = [
-    { name: "Home", link: "Home" },
-    { name: "About", link: "About" },
-    { name: "Services", link: "Services" },
-    { name: "Contact", link: "Contact" },
-    { name: "Blogs", navslink: "Blogs" },
+    { name: "Home", link: "Home", path: "/" },
+    { name: "Blogs", navslink: "Blogs", path: "/Blogs" },
   ];
 
   return (
-    <Nav>
-      <Container>
-        <a href="#Home" style={{ textDecoration: "none" }}>
-          <Logo>
-            <img src={Logo1} alt="logo" />
-            <span>NPNG Tech</span>
-          </Logo>
-        </a>
-        <Hamburger onClick={toggleMenu}>
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </Hamburger>
-        <Menu isOpen={isOpen}>
-          {navlist.map((item, index) => (
-            <MenuItem key={index}>
-              {item.link ? (
-                <a
-                  className={item?.className}
-                  onClick={toggleMenu}
-                  href={`#${item.link}`}
-                >
-                  {item.name}
-                </a>
-              ) : (
-                <Link onClick={toggleMenu} to={`/${item.navslink}`}>
-                  {item.name}
-                </Link>
-              )}
-            </MenuItem>
-          ))}
-        </Menu>
-        <SignupButton>
-          <a
-            href="#"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            Sign Up
+    <div style={{ padding: "50px 0", margin: "0 auto" }}>
+      <Nav>
+        <Container>
+          <a href="#Home" style={{ textDecoration: "none" }}>
+            <Logo>
+              <img src={Logo1} alt="logo" />
+              <span>NPNG Tech</span>
+            </Logo>
           </a>
-        </SignupButton>
-      </Container>
-    </Nav>
+          <Hamburger onClick={toggleMenu}>
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </Hamburger>
+          <Menu isOpen={isOpen}>
+            {navlist.map((item, index) => (
+              <MenuItem key={index}>
+                {item.link ? (
+                  <a
+                    className={location.pathname === item.path ? "active" : ""}
+                    href={`#${item.link}`}
+                    onClick={(e) => handleLinkClick(e, item.link)}
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    onClick={toggleMenu}
+                    className={
+                      location.pathname.startsWith("/Blogs") ? "active" : ""
+                    }
+                    to={`/${item.navslink}`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </MenuItem>
+            ))}
+          </Menu>
+          <SignupButton>
+            <a
+              href="/signup"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              Sign Up
+            </a>
+          </SignupButton>
+        </Container>
+      </Nav>
+      <Blogs />
+      <Footer />
+    </div>
   );
 };
 
-export default Navbar;
+export default Blog;
+
+// Styled Components remain the same.
 
 // Styled Components
 const Nav = styled.nav`
@@ -162,7 +160,7 @@ const Menu = styled.ul`
     width: 100%;
     gap: 0;
     background-color: white;
-    max-height: ${({ isOpen }) => (isOpen ? "350px" : "0")};
+    max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
   }

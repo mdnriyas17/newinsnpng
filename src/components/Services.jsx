@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaMobileScreen } from "react-icons/fa6";
 import { SiAmazonwebservices } from "react-icons/si";
@@ -9,6 +8,7 @@ import { TfiCommentAlt } from "react-icons/tfi";
 import { RiCustomerService2Line } from "react-icons/ri";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 const Ourservicepage = () => {
   useEffect(() => {
     Aos.init({ duration: 2000 });
@@ -84,178 +84,46 @@ const Ourservicepage = () => {
   ];
 
   return (
-    <ServiceContainer id="Services" data-aos="fade-up" data-aos-duration="1000">
-      <SectionTitle>
-        <h2>
-          Popul<Highlighted>ar Se</Highlighted>rvices
+    <div id="Services" className="max-w-5xl mx-auto px-4 py-8">
+      <div className="text-center mb-10">
+        <h2 className="text-2xl text-orange-500 mb-4">
+          Popul<span className="border-b-2 border-gray-900">ar Se</span>rvices
         </h2>
-        <h1>Services to your business growth</h1>
-        <p >
-        Discover how our personalized solutions can help your business thrive. From strategic planning to execution, make your journey to success smoother and more rewarding.
+        <h1 className="text-4xl mb-4">Services to your business growth</h1>
+        <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+          Discover how our personalized solutions can help your business thrive.
+          From strategic planning to execution, make your journey to success
+          smoother and more rewarding.
         </p>
-      </SectionTitle>
-      <ServiceList>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {ourservices.map((ourservice, index) => (
-          <ServiceItem
+          <div
             key={ourservice.id}
+            className="bg-gray-100 p-6 border border-rgpa(0,0,0,0.1) rounded-lg hover:border-gray-900 text-center shadow-sm hover:shadow-lg transition-shadow duration-300"
             data-aos="fade-up"
-            data-aos-duration={index * 1000}
-            // Add a delay of 1 second (1000ms) for each item
+            data-aos-duration={(index + 1) * 1000}
           >
-            {/* <ServiceImage src={ourservice?.image} alt={ourservice.title} /> */}
-            <ServiceImage>{ourservice.image}</ServiceImage>
-            <ServiceContent>
-              <h3>{ourservice.title}</h3>
-              <p>{ourservice.describtion}</p>
-            </ServiceContent>
-          </ServiceItem>
+            <div className="flex justify-center items-center mb-6 text-5xl text-orange-500">
+              {ourservice.image}
+            </div>
+            <div>
+              <h3 className="text-2xl text-gray-900 mb-4">{ourservice.title}</h3>
+              <p className="text-gray-600 leading-relaxed">
+                {ourservice.describtion}
+              </p>
+            </div>
+            {/* <Link
+              to={ourservice.button.link}
+              className="inline-block mt-6 px-4 py-2 text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-500 hover:text-white transition-colors duration-300"
+            >
+              {ourservice.button.text}
+            </Link> */}
+          </div>
         ))}
-      </ServiceList>
-    </ServiceContainer>
+      </div>
+    </div>
   );
 };
 
 export default Ourservicepage;
-
-const ServiceContainer = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-    max-width: 870px;
-  }
-  @media (max-width: 768px) {
-    max-width: 730px;
-  }
-  @media (max-width: 425px) {
-    max-width: 400px;
-  }
-  @media (max-width: 375px) {
-    max-width: 370px;
-  }
-  @media (max-width: 320px) {
-    max-width: 300px;
-  }
-`;
-
-const SectionTitle = styled.div`
-  text-align: center;
-  margin-bottom: 40px;
-
-  h2 {
-    font-size: 2rem;
-    color: #f98866;
-    margin-bottom: 10px;
-  }
-
-  h1 {
-    font-size: 3rem;
-    margin: 0;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin: 0 auto;
-    text-align: center;
-    max-width: 800px; /* Adjust this value as needed */
-    line-height: 1.5; /* Adjust line-height to control spacing */
-  }
-`;
-
-const Highlighted = styled.span`
-  border-bottom: 2px solid rgba(10, 13, 80, 1);
-`;
-
-const ServiceList = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-`;
-
-const ServiceItem = styled.div`
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid rgba(10, 13, 80, 1);
-  // border-radius: 8px;
-  text-align: center;
-
-  &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-`;
-
-const ServiceImage = styled.div`
-  font-size: 2rem;
-  color: #f98866;
-  background-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  margin-bottom: 20px;
-`;
-
-const ServiceContent = styled.div`
-  margin-top: 20px;
-  text-align: center; /* Center align text within the container */
-
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: rgba(10, 13, 80, 1);
-  }
-
-  p {
-    font-size: 16px;
-    color: #666;
-      font-weight: 400;
-    text-align: center;
-    padding: 0 60px;
-    margin: 0 auto 20px; /* Center align paragraph and add bottom margin */
-    max-width: 600px; /* Optional: limit width for better readability */
-    line-height: 1.6; /* Improve readability */
-  }
-
-  /* Responsive design */
-  @media (max-width: 768px) {
-    h3 {
-      font-size: 1.2rem; /* Adjust font size for smaller screens */
-    }
-
-    p {
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
-      max-width: 90%; /* Increase max-width on smaller screens */
-    }
-  }
-
-  @media (max-width: 480px) {
-    h3 {
-      font-size: 1rem; /* Further adjust font size for very small screens */
-    }
-
-    p {
-      font-size: 0.8rem; /* Further adjust font size for very small screens */
-      max-width: 100%; /* Allow paragraph to use full width */
-    }
-  }
-`;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
-
-const ServiceButton = styled.button`
-  padding: 10px 20px;
-  color: #f98866;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #e76f51;
-    color: #fff;
-  }
-`;
