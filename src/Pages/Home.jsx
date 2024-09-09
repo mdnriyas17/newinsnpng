@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Subbanner from "../components/Subbanner";
 import styled from "styled-components";
 import Enquiry from "../components/Enquiry";
+import Testimonials from "../components/Testimonial";
 const Home = () => {
   return (
     <>
@@ -25,6 +26,8 @@ const Home = () => {
           <Midabout />
         </Section>
         <Section id="Contact">
+        <Testimonials />
+
           <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#f98866" }}>Contact Us</h1>
           <Enquiry/>
           <Footer />

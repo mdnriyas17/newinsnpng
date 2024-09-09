@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import image4 from "../../public/Programming.png";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { FaMobileScreen } from "react-icons/fa6";
