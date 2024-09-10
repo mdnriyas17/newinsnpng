@@ -44,7 +44,7 @@ const App = () => {
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<Blogsingle />} />
       </Routes>
-      <ChatButton onClick={toggleChatBox}>Chat</ChatButton>
+      {/* <ChatButton onClick={toggleChatBox}>Chat</ChatButton>
       {isOpen && (
         <ChatContainer>
           <ChatHeader>
@@ -71,7 +71,7 @@ const App = () => {
             {result && <ResultMessage>{result}</ResultMessage>}
           </ChatBody>
         </ChatContainer>
-      )}
+      )} */}
     </>
   );
 };
