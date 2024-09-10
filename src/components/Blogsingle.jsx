@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import styled from "styled-components";
 import image1 from "../assets/image1.png";
 import image2 from "../assets/image2.png";
 import image3 from "../assets/image3.png";
@@ -10,6 +11,8 @@ import image5 from "../assets/image5.png";
 import image6 from "../assets/image6.png";
 import image7 from "../assets/image7.png";
 import image8 from "../assets/image8.png";
+
+
 
 const Blogsingle = () => {
   const { id } = useParams();
@@ -90,50 +93,146 @@ const Blogsingle = () => {
 
   if (!blog) {
     return (
-      <h2 className="text-center my-5 py-12 text-2xl text-red-500">Blog not found</h2>
+      <h2 style={{ textAlign: "center", marginTop: "2rem", paddingBottom: "3rem", fontSize: "2rem", color: "red" }}>
+        Blog not found
+      </h2>
     );
   }
 
   return (
-    <div className="bg-white pb-12 pt-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-4xl font-extrabold text-gray-900" data-aos="fade-up">
-            {blog?.title}
-          </h1>
-          <p className="mt-4 text-lg text-gray-600" data-aos="fade-up">
-            {blog?.description}
-          </p>
+    <BlogContainer>
+      <ContentWrapper>
+        <div style={{ textAlign: "center" }}>
+          <Title data-aos="fade-up">{blog?.title}</Title>
+          <Description data-aos="fade-up">{blog?.description}</Description>
         </div>
-        <div className="mt-10">
+        <SectionContainer>
           {blog.content.length &&
             blog.content.map((section, index) => (
-              <div
+              <SectionWrapper
                 key={section.id}
-                className="flex flex-col md:flex-row md:items-center mb-12"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
-                <div className="md:w-1/2 md:pr-8">
-                  <img
-                    src={section.images}
-                    alt={section.title}
-                    className="w-full h-auto rounded-lg shadow-lg"
-                  />
-                </div>
-                <div className="mt-6 md:mt-0 md:w-1/2 md:pl-8">
-                  <h2 className="text-2xl font-semibold text-blue-900 mb-4">
-                    {section.title}
-                  </h2>
-                  <p className="text-base text-gray-700">
-                    {section.content}
-                  </p>
-                </div>
-              </div>
+                <ImageWrapper>
+                  <Image src={section.images} alt={section.title} />
+                </ImageWrapper>
+                <TextWrapper>
+                  <SectionTitle>{section.title}</SectionTitle>
+                  <SectionContent>{section.content}</SectionContent>
+                </TextWrapper>
+              </SectionWrapper>
             ))}
-        </div>
-      </div>
-    </div>
+        </SectionContainer>
+      </ContentWrapper>
+    </BlogContainer>
   );
 };
 
 export default Blogsingle;
+
+
+const BlogContainer = styled.div`
+  background-color: white;
+  padding-bottom: 3rem;
+  padding-top: 4rem;
+  box-sizing: border-box;
+`;
+
+const ContentWrapper = styled.div`
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  @media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+`;
+
+const Title = styled.h1`
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1f2937;
+  text-align: center;
+
+  @media (min-width: 640px) {
+    font-size: 3rem;
+  }
+`;
+
+const Description = styled.p`
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: center;
+`;
+
+const SectionContainer = styled.div`
+  margin-top: 2.5rem;
+`;
+
+const SectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &:nth-child(odd) {
+    flex-direction: column-reverse;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+`;
+
+const ImageWrapper = styled.div`
+  flex: 1;
+  padding-right: 0;
+
+  @media (min-width: 768px) {
+    padding-right: 2rem;
+  }
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+`;
+
+const TextWrapper = styled.div`
+  margin-top: 1.5rem;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+    padding-left: 2rem;
+    flex: 1;
+  }
+`;
+
+const SectionTitle = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+`;
+
+const SectionContent = styled.p`
+  font-size: 1rem;
+  color: #374151;
+`;

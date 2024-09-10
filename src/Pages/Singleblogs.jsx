@@ -221,9 +221,6 @@ const SignupButton = styled.div`
   }
 
   @media (max-width: 768px) {
-    margin-top: 10px;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
+   display: none;
   }
 `;
