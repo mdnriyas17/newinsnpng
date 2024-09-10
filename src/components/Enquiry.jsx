@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import axios from 'axios';
-import aos from 'aos';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const EnquiryPage = () => {
 
   useEffect(() => {
-    aos.init();
+    AOS.init({
+      duration: 1200, // Control the duration of AOS animations
+    });
   }, []);
 
   const [values, setValues] = useState({
@@ -52,13 +55,13 @@ const EnquiryPage = () => {
   };
 
   return (
-    <Container data-aos="fade-up">
+    <Container>
       <FormWrapper>
         <Title>Enquiry Form</Title>
         <form onSubmit={handleSubmit}>
           <FormGroup>
             <div style={{ flex: 1 }}>
-              <Label htmlFor="name" data-aos="fade-up" data-aos-duration="1000">Name</Label>
+              <Label htmlFor="name" data-aos="fade-up">Name</Label>
               <Input 
                 type="text"
                 id="name"
@@ -69,7 +72,7 @@ const EnquiryPage = () => {
               />
             </div>
             <div style={{ flex: 1 }}>
-              <Label htmlFor="email" data-aos="fade-up" data-aos-duration="1500">Email</Label>
+              <Label htmlFor="email" data-aos="fade-up" data-aos-delay="100">Email</Label>
               <Input
                 type="email"
                 id="email"
@@ -83,7 +86,7 @@ const EnquiryPage = () => {
 
           <FormGroup>
             <div style={{ flex: 1 }}>
-              <Label htmlFor="phone" data-aos="fade-up" data-aos-duration="2000">Phone</Label>
+              <Label htmlFor="phone" data-aos="fade-up" data-aos-delay="200">Phone</Label>
               <Input
                 type="tel"
                 id="phone"
@@ -94,7 +97,7 @@ const EnquiryPage = () => {
               />
             </div>
             <div style={{ flex: 1 }}>
-              <Label htmlFor="message" data-aos="fade-up" data-aos-duration="2500">Message</Label>
+              <Label htmlFor="message" data-aos="fade-up" data-aos-delay="300">Message</Label>
               <TextArea
                 id="message"
                 name="message"
@@ -105,7 +108,7 @@ const EnquiryPage = () => {
             </div>
           </FormGroup>
 
-          <Button type="submit">Send Enquiry</Button>
+          <Button type="submit" data-aos="fade-up" data-aos-delay="400">Send Enquiry</Button>
         </form>
       </FormWrapper>
     </Container>
@@ -113,7 +116,6 @@ const EnquiryPage = () => {
 };
 
 export default EnquiryPage;
-
 
 // Animations
 const fadeIn = keyframes`
@@ -133,13 +135,16 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
+
   @media (max-width: 425px) {
     padding: 20px;
+    min-height: 50vh; // Adjusting height for small screens
   }
 
   @media (max-width: 320px) {
     padding: 15px;
+    min-height: 40vh; // Further reducing height for very small screens
   }
 `;
 
@@ -153,16 +158,17 @@ const FormWrapper = styled.div`
   max-width: 900px;
   border: 1px solid #e0e0e0;
   animation: ${fadeIn} 1s ease-out;
+
   @media (max-width: 425px) {
-    padding: 20px;
+    padding: 20px; // Adjusting padding for small screens
   }
 
   @media (max-width: 375px) {
-    padding: 15px;
+    padding: 15px; // Further reducing padding for smaller screens
   }
 
   @media (max-width: 320px) {
-    padding: 10px;
+    padding: 10px; // Further reducing padding for very small screens
   }
 `;
 
@@ -174,6 +180,7 @@ const Title = styled.h1`
   background: linear-gradient(to right, #ff416c, #ff4b2b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
   @media (max-width: 425px) {
     font-size: 2rem;
   }
@@ -184,7 +191,6 @@ const Label = styled.label`
   margin-bottom: 10px;
   font-weight: bold;
   color: #333;
-  animation: ${fadeIn} 1.2s ease-out;
 `;
 
 const Input = styled.input`
@@ -249,3 +255,4 @@ const FormGroup = styled.div`
     flex-direction: column;
   }
 `;
+

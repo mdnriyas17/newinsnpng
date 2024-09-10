@@ -26,7 +26,7 @@ const Home = () => {
           <Midabout />
         </Section>
         <Section id="Contact">
-          <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#f98866" }}>Contact Us</h1>
+          <h1 style={{ textAlign: "center", marginBottom: "20px", color: "#f98866", fontWeight: "bold", fontSize: "30px" }}>Contact Us</h1>
           <Enquiry/>
           <Footer />
         </Section>
