@@ -7,6 +7,7 @@ import {
   LinkedinOutlined,
 } from "@ant-design/icons";
 import Logo from "../../public/large.png";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <FooterContainer id="Contact">
@@ -61,6 +62,8 @@ const Footer = () => {
             <FooterLink href="#About">About</FooterLink>
             <FooterLink href="#Services">Services</FooterLink>
             <FooterLink href="#Contact">Contact</FooterLink>
+            <FooterLink href=""><Link to={"/Blogs"} onClick={() => window.scrollTo(top, 0)}>Blogs</Link></FooterLink>
+
           </FooterLinks>
         </FooterSection>
 

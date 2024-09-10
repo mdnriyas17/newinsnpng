@@ -160,7 +160,7 @@ const ContentWrapper = styled.div`
 const Title = styled.h1`
   font-size: 2.25rem;
   font-weight: 800;
-  color: #1f2937;
+  color: rgba(255, 72, 2, 1);
   text-align: center;
 
   @media (min-width: 640px) {
@@ -189,13 +189,6 @@ const SectionWrapper = styled.div`
     align-items: center;
   }
 
-  &:nth-child(odd) {
-    flex-direction: column-reverse;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-    }
-  }
 `;
 
 const ImageWrapper = styled.div`
@@ -226,9 +219,9 @@ const TextWrapper = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #1e3a8a;
+  color: rgba(10, 13, 80, 1);
   margin-bottom: 1rem;
 `;
 
