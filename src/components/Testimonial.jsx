@@ -10,7 +10,8 @@ import image6 from "../assets/image6.png";
 import image7 from "../assets/image7.png";
 import image8 from "../assets/image8.png";
 import { Link } from "react-router-dom";
-
+import Seoimage from "../assets/seo.png";
+import { useNavigate } from "react-router-dom";
 const Blogsingle = () => {
   const data = [
     {
@@ -22,15 +23,26 @@ const Blogsingle = () => {
     },
     {
       id: 2,
-      title: "The Importance of Continuous Learning in the Tech Industry",
+      title: "Digital marketing",
       description:
-        "In the fast-paced world of technology, standing still is not an option. The tech industry is characterized by rapid advancements, evolving tools, and shifting paradigms, making continuous learning an essential practice for tech professionals. Whether you're a software developer, data analyst, or IT specialist, staying updated with the latest trends and skills is crucial for career growth and success.",
-      images: image2,
+        "Digital marketing refers to the use of digital channels, platforms, and technologies to promote products, services, or brands to potential customers. It encompasses a wide range of online marketing activities, including",
+      images: Seoimage,
     },
   ];
 
   useEffect(() => {
     AOS.init({ duration: 1200 });
+  }, []);
+
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    console.log(id);
+    navigate(`/blog/${id}`);
+    window.scrollTo(0, 0);
+  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const truncateText = (text, wordLimit) => {

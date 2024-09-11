@@ -17,6 +17,9 @@ import { GoStarFill } from "react-icons/go";
 const Blogsingle = () => {
   const { id } = useParams();
   const blogId = parseInt(id);
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, [id]); // Triggers when `id` changes
 
   const data = [
     {
@@ -1623,11 +1626,12 @@ const SectionTitlele = styled.h2`
   margin-bottom: 1rem;
 `;
 const SectionTitleleft = styled.h2`
+
   font-size: 2rem;
   font-weight: 600;
   text-align: left;
   color: rgba(255, 72, 2, 1);
-  margin-bottom: 1rem;
+  margin: 4rem 0 1rem 0;
 `;
 
 const SectionSubTitle = styled.h3`
