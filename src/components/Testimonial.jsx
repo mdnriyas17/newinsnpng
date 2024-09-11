@@ -20,13 +20,13 @@ const Blogsingle = () => {
         "In the fast-paced world of technology, standing still is not an option. The tech industry is characterized by rapid advancements, evolving tools, and shifting paradigms, making continuous learning an essential practice for tech professionals. Whether you're a software developer, data analyst, or IT specialist, staying updated with the latest trends and skills is crucial for career growth and success.",
       images: image1,
     },
-    // {
-    //   id: 2,
-    //   title: "The Importance of Continuous Learning in the Tech Industry",
-    //   description:
-    //     "In the fast-paced world of technology, standing still is not an option. The tech industry is characterized by rapid advancements, evolving tools, and shifting paradigms, making continuous learning an essential practice for tech professionals. Whether you're a software developer, data analyst, or IT specialist, staying updated with the latest trends and skills is crucial for career growth and success.",
-    //   images: image2,
-    // },
+    {
+      id: 2,
+      title: "The Importance of Continuous Learning in the Tech Industry",
+      description:
+        "In the fast-paced world of technology, standing still is not an option. The tech industry is characterized by rapid advancements, evolving tools, and shifting paradigms, making continuous learning an essential practice for tech professionals. Whether you're a software developer, data analyst, or IT specialist, staying updated with the latest trends and skills is crucial for career growth and success.",
+      images: image2,
+    },
   ];
 
   useEffect(() => {
