@@ -146,7 +146,7 @@ const CompanyName = styled.h2`
 `;
 
 const FooterDescription = styled.p`
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.5;
   @media (max-width: 768px) {
     font-size: 14px;

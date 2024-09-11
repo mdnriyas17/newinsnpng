@@ -39,7 +39,7 @@ const Ourservicepage = () => {
     },
     {
       id: 3,
-      title: "Ui/Ux Designs",
+      title: "UI/UX Designs",
       describtion:
         "From sleek and intuitive UI/UX designs to seamless user experiences, we elevate your web applications to captivate and engage users, ensuring optimal digital interaction.",
       image: <HiOutlineBuildingOffice2 />,

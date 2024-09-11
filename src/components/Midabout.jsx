@@ -22,10 +22,10 @@ const Banner = () => {
           word of mouth a powerful voice and far reach. buying patterns and
           product.
         </Description>
-        <UnorderList>
+        {/* <UnorderList>
           <ListItem>Expert trainers</ListItem>
           <ListItem>Lifetime accesss</ListItem>
-        </UnorderList>
+        </UnorderList> */}
         <a href="#Home">
 
         <ActionButton>Get a Quote</ActionButton>

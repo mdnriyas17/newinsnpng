@@ -1435,7 +1435,7 @@ const Blogsingle = () => {
       <h2
         style={{
           textAlign: "center",
-          marginTop: "2rem",
+          marginTop: "7rem",
           paddingBottom: "3rem",
           fontSize: "2rem",
           color: "red",
@@ -1619,19 +1619,18 @@ const SectionTitle = styled.h2`
   margin-bottom: 1rem;
 `;
 const SectionTitlele = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: left;
   color: rgba(10, 13, 80, 1);
-  margin-bottom: 1rem;
+  margin: 1rem 0 0 0;
 `;
 const SectionTitleleft = styled.h2`
-
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.1rem;
+  font-weight: 700;
   text-align: left;
   color: rgba(255, 72, 2, 1);
-  margin: 4rem 0 1rem 0;
+  margin: 4.1rem 0 1rem 0;
 `;
 
 const SectionSubTitle = styled.h3`
