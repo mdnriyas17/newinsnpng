@@ -4,6 +4,7 @@ import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Blogsingle from "./Pages/Singleblogs";
 import Blog from "./Pages/Blog";
+import Mobileapp from "./Pages/Mobileapp";
 import styled from "styled-components";
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<Blogsingle />} />
+        <Route path="/mobileapp" element={<Mobileapp />} />
       </Routes>
       {/* <ChatButton onClick={toggleChatBox}>Chat</ChatButton>
       {isOpen && (

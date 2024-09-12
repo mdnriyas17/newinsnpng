@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import image1 from "../assets/image1.png";
+import image1 from "../../public/Ever.jpg";
 import image2 from "../assets/image2.png";
 import Book from "../assets/book.png";
 import { Link } from "react-router-dom";
@@ -23,12 +23,12 @@ const Blogsingle = () => {
         "Digital marketing refers to the use of digital channels, platforms, and technologies to promote products, services, or brands to potential customers. It encompasses a wide range of online marketing activities, including",
       images: Seoimage,
     },
-    // {
-    //   id: 3,
-    //   title: "Why Reading Books Can Transform Your Life",
-    //   description:"In today's fast-paced world, where information is available at our fingertips, many people underestimate the power of reading books. But here's the truth: countless billionaires, leaders, and successful entrepreneurs credit much of their success to reading. Bill Gates, Warren Buffett, Elon Musk, and Oprah Winfrey, to name just a few, all have one thing in common—an insatiable thirst for knowledge through reading.",
-    //   images: Book,
-    // }
+    {
+      id: 3,
+      title: "Why Reading Books Can Transform Your Life",
+      description:"In today's fast-paced world, where information is available at our fingertips, many people underestimate the power of reading books. But here's the truth: countless billionaires, leaders, and successful entrepreneurs credit much of their success to reading. Bill Gates, Warren Buffett, Elon Musk, and Oprah Winfrey, to name just a few, all have one thing in common—an insatiable thirst for knowledge through reading.",
+      images: Book,
+    }
   ];
 
   useEffect(() => {

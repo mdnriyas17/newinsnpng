@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Image1 from "../../public/About1.png";
+import Image1 from "../../public/VI1.png";
 import Image2 from "../../public/Aboutback.png";
 import Aos from "aos";
 import 'aos/dist/aos.css';
@@ -80,7 +80,6 @@ export const ImageContainer = styled.div`
     max-width: 541.48px;
     height: auto;
     border-radius: 20px;
-    transform: rotate(-10deg);
 
     @media (max-width: 1200px) {
       max-width: 480px;

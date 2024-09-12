@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import Image1 from "../../public/Programming.png";
+import Image1 from "../../public/Homebanner.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
