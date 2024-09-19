@@ -34,9 +34,9 @@ const Home = () => {
   );
 };
 const Section = styled.section`
-  padding: 60px 20px;
+  padding: 60px 20px 0px 20px;
   @media screen and (min-width: 768px) {
-    padding: 60px 40px;
+    padding: 60px 20px 0px 20px;
   }
 `;
 

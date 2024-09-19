@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Bookimg from "../assets/book.png";
+import Bookimg from "../../public/why.png";
+import Life from "../../public/life.png";
+import Billior from "../../public/billoinaire.png";
+import Skillbook from "../../public/Developskill.png";
 import { Link } from "react-router-dom";
 
 const Booksblog = () => {
@@ -19,6 +22,7 @@ const Booksblog = () => {
             {
               id: 1,
               title: "How Does Reading Help You Improve Your Life?",
+              image: Life,
               description:"Reading is much more than a leisure activity. It’s an investment in yourself. Here’s how:",
               listitem: [
                 {
@@ -46,6 +50,7 @@ const Booksblog = () => {
             {
               id: 2,
               title: "Why Should You Read Books Daily?",
+              image: Bookimg,
               describtion:"Making reading a daily habit can supercharge your personal growth. Here’s why daily reading is key:",
               listitem: [
                 {
@@ -73,6 +78,7 @@ const Booksblog = () => {
             {
               id: 3,
               title: "Can Reading Books Really Make You a Billionaire?",
+              image: Billior,
               describtion:"While reading alone won’t make you a billionaire, it can certainly help you get there. Many successful people use books to learn about strategies, habits, and mindsets that contribute to their success. Here are a few examples:",
               listitem: [
                 {
@@ -95,6 +101,7 @@ const Booksblog = () => {
             {
               id: 4,
               title: "How to Develop the Skill of Reading Books ?",
+              image: Skillbook,
               describtion:"If you're not a regular reader, don't worry—it’s a skill that can be developed. Here are some tips to help you build a consistent reading habit:",
               listitem: [
                 {
@@ -129,7 +136,8 @@ const Booksblog = () => {
               id: 7,
               title: "Must-Read Books for Entrepreneurs",
               description:"Must-read books for entrepreneurs are essential resources for anyone looking to succeed in the competitive world of business. These books provide proven strategies, inspiring success stories, and actionable advice on everything from startup management to leadership and innovation. By diving into these must-reads, entrepreneurs can gain the knowledge and skills necessary to navigate challenges, seize opportunities, and drive their ventures to new heights."
-            },{
+            },
+            {
               id: 8,
               title: "Financial Literacy Books",
               description:"Financial literacy books are crucial for understanding and managing your finances effectively. They offer practical advice on budgeting, investing, and building wealth, helping you make informed financial decisions. By learning from these books, you can gain the knowledge to achieve financial independence and secure a stable financial future."
@@ -796,7 +804,93 @@ const Booksblog = () => {
       ]
     },
   ];
+
+  const [visibleSections, setVisibleSections] = useState({});
+
+  // Function to toggle the visibility of a section
+  const toggleSectionVisibility = (sectionId) => {
+    setVisibleSections((prevState) => ({
+      ...prevState,
+      [sectionId]: !prevState[sectionId], // Toggle the visibility for the clicked section
+    }));
+  };
+
+
   return (
+    // <BlogContainer>
+    //   <ContentWrapper>
+    //     <div style={{ textAlign: "center" }}>
+    //       <Title data-aos="fade-up">{data?.[0].title}</Title>
+    //       <Description data-aos="fade-up">{data?.[0].describtion}</Description>
+    //       <ImageWrapper>
+    //         <Image src={data?.[0].images} alt={data?.[0].title} />
+    //       </ImageWrapper>
+    //     </div>
+    //     <SectionContainer>
+    //       {data?.[0].content.map((section, index) => (
+    //         <SectionWrapper key={section.id}>
+    //           <TextWrapper>
+    //             <SectionTitle>{section?.title}</SectionTitle>
+    //             <SubsectionTitle>{section?.mainheading}</SubsectionTitle>
+    //             <SubsectionDescription>
+    //                   {section?.description}
+    //                 </SubsectionDescription>
+    //             {section?.subcontent?.map((subsection, index) => (  
+    //               <SectionContent key={subsection.id}>
+    //                 <SubsectionTitle>{subsection?.title}</SubsectionTitle>
+    //                 <SubsectionSubtitle>{subsection?.subtitle}</SubsectionSubtitle>
+    //                 <SubsectionAuthour>{subsection?.authour}</SubsectionAuthour>
+    //                 <SubsectionDescription>
+    //                   {subsection?.description}
+    //                 </SubsectionDescription>
+    //                 <SubsectionLink href={subsection?.booklink} target="_blank">{subsection?.booklink}</SubsectionLink>
+    //                 <SubsectionList>
+    //                   {subsection?.listitem?.map((item, index) => (
+    //                     <SubsectionListItem key={item.id}>
+    //                       <SubsectionListItemTitle>
+    //                         {item.title}
+    //                       </SubsectionListItemTitle>
+    //                       <SubsectionListItemDescription>
+    //                         {item.description}
+    //                       </SubsectionListItemDescription>
+    //                     </SubsectionListItem>
+    //                   ))}
+    //                 </SubsectionList>
+    //               </SectionContent>
+    //             ))}
+    //             {section?.conttext?.map((subsection, index) => (
+    //               <SectionContent key={subsection.id}>
+    //               <SubsectionTitle>{subsection?.subtitle}</SubsectionTitle>
+    //              {subsection?.subcontent?.map((item, index) => (
+    //               <SubsectionList key={item.id}>
+    //                  <SubsectionSubtitle>{item?.subtitle}</SubsectionSubtitle>
+    //               <SubsectionAuthour>{item?.authour}</SubsectionAuthour>
+    //               <SubsectionDescription>
+    //                 {item?.description}
+    //               </SubsectionDescription>
+    //               <SubsectionLink href={item?.booklink} target="_blank">{item?.booklink}</SubsectionLink>
+    //               <SubsectionList>
+    //                 {item?.listitem?.map((item, index) => (
+    //                   <SubsectionListItem key={item.id}>
+    //                     <SubsectionListItemTitle>
+    //                       {item.title}
+    //                     </SubsectionListItemTitle>
+    //                     <SubsectionListItemDescription>
+    //                       {item.description}
+    //                     </SubsectionListItemDescription>
+    //                   </SubsectionListItem>
+    //                 ))}
+    //               </SubsectionList>
+    //                 </SubsectionList>
+    //              ))}
+    //             </SectionContent>
+    //             ))}
+    //           </TextWrapper>
+    //         </SectionWrapper>
+    //       ))}
+    //     </SectionContainer>
+    //   </ContentWrapper>
+    // </BlogContainer>
     <BlogContainer>
       <ContentWrapper>
         <div style={{ textAlign: "center" }}>
@@ -806,65 +900,67 @@ const Booksblog = () => {
             <Image src={data?.[0].images} alt={data?.[0].title} />
           </ImageWrapper>
         </div>
+
         <SectionContainer>
-          {data?.[0].content.map((section, index) => (
+          {data?.[0].content.map((section) => (
             <SectionWrapper key={section.id}>
               <TextWrapper>
-                <SectionTitle>{section?.title}</SectionTitle>
-                <SubsectionTitle>{section?.mainheading}</SubsectionTitle>
-                <SubsectionDescription>
-                      {section?.description}
-                    </SubsectionDescription>
-                {section?.subcontent?.map((subsection, index) => (  
-                  <SectionContent key={subsection.id}>
-                    <SubsectionTitle>{subsection?.title}</SubsectionTitle>
-                    <SubsectionSubtitle>{subsection?.subtitle}</SubsectionSubtitle>
-                    <SubsectionAuthour>{subsection?.authour}</SubsectionAuthour>
-                    <SubsectionDescription>
-                      {subsection?.description}
-                    </SubsectionDescription>
-                    <SubsectionLink>{subsection?.booklink}{" "}</SubsectionLink>
-                    <SubsectionList>
-                      {subsection?.listitem?.map((item, index) => (
-                        <SubsectionListItem key={item.id}>
-                          <SubsectionListItemTitle>
-                            {item.title}
-                          </SubsectionListItemTitle>
-                          <SubsectionListItemDescription>
-                            {item.description}
-                          </SubsectionListItemDescription>
-                        </SubsectionListItem>
-                      ))}
-                    </SubsectionList>
-                  </SectionContent>
-                ))}
-                {section?.conttext?.map((subsection, index) => (
-                  <SectionContent key={subsection.id}>
-                  <SubsectionTitle>{subsection?.subtitle}</SubsectionTitle>
-                 {subsection?.subcontent?.map((item, index) => (
-                  <SubsectionList key={item.id}>
-                     <SubsectionSubtitle>{item?.subtitle}</SubsectionSubtitle>
-                  <SubsectionAuthour>{item?.authour}</SubsectionAuthour>
-                  <SubsectionDescription>
-                    {item?.description}
-                  </SubsectionDescription>
-                  <SubsectionLink>{item?.booklink}{" "}</SubsectionLink>
-                  <SubsectionList>
-                    {item?.listitem?.map((item, index) => (
-                      <SubsectionListItem key={item.id}>
-                        <SubsectionListItemTitle>
-                          {item.title}
-                        </SubsectionListItemTitle>
-                        <SubsectionListItemDescription>
-                          {item.description}
-                        </SubsectionListItemDescription>
-                      </SubsectionListItem>
+                {/* Section title as clickable */}
+                <SectionTitle  isActive={visibleSections[section.id]}  onClick={() => toggleSectionVisibility(section.id)}>
+                  {section?.title} <span>{visibleSections[section.id] ? "-" : "+"}</span>
+                </SectionTitle>
+                
+                {/* Show content only if visibleSections[section.id] is true */}
+                {visibleSections[section.id] && (
+                  <>
+                    <SubsectionTitle>{section?.mainheading}</SubsectionTitle>
+                    <SubsectionDescription>{section?.description}</SubsectionDescription>
+
+                    {section?.subcontent?.map((subsection) => (
+                      <SectionContent key={subsection.id}>
+                        <SubsectionTitle>{subsection?.title}</SubsectionTitle>
+                        <SubsectionSubtitle>{subsection?.subtitle}</SubsectionSubtitle>
+                        <SubsectionAuthour>{subsection?.authour}</SubsectionAuthour>
+                        <SubsectionDescription>{subsection?.description}</SubsectionDescription>
+                        <SubsectionLink href={subsection?.booklink} target="_blank">
+                          {subsection?.booklink}
+                        </SubsectionLink>
+                        <SubsectionList>
+                          {subsection?.listitem?.map((item) => (
+                            <SubsectionListItem key={item.id}>
+                              <SubsectionListItemTitle>{item.title}</SubsectionListItemTitle>
+                              <SubsectionListItemDescription>{item.description}</SubsectionListItemDescription>
+                            </SubsectionListItem>
+                          ))}
+                        </SubsectionList>
+                      </SectionContent>
                     ))}
-                  </SubsectionList>
-                    </SubsectionList>
-                 ))}
-                </SectionContent>
-                ))}
+
+                    {section?.conttext?.map((subsection) => (
+                      <SectionContent key={subsection.id}>
+                        <SubsectionTitle>{subsection?.subtitle}</SubsectionTitle>
+                        {subsection?.subcontent?.map((item) => (
+                          <SubsectionList key={item.id}>
+                            <SubsectionSubtitle>{item?.subtitle}</SubsectionSubtitle>
+                            <SubsectionAuthour>{item?.authour}</SubsectionAuthour>
+                            <SubsectionDescription>{item?.description}</SubsectionDescription>
+                            <SubsectionLink href={item?.booklink} target="_blank">
+                              {item?.booklink}
+                            </SubsectionLink>
+                            <SubsectionList>
+                              {item?.listitem?.map((listItem) => (
+                                <SubsectionListItem key={listItem.id}>
+                                  <SubsectionListItemTitle>{listItem.title}</SubsectionListItemTitle>
+                                  <SubsectionListItemDescription>{listItem.description}</SubsectionListItemDescription>
+                                </SubsectionListItem>
+                              ))}
+                            </SubsectionList>
+                          </SubsectionList>
+                        ))}
+                      </SectionContent>
+                    ))}
+                  </>
+                )}
               </TextWrapper>
             </SectionWrapper>
           ))}
@@ -909,6 +1005,7 @@ const SubsectionAuthour = styled.p`
 const SubsectionLink = styled.a`
   display: block;
   font-size: 1rem;
+  cursor: pointer;
   font-weight: 400;
   text-align: left;
   color: rgba(0, 0, 0, 1);
@@ -1028,10 +1125,26 @@ const TextWrapper = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  background-color: ${({ isActive }) => (isActive ? "#d1e0ff" : "#f5f5f5")}; /* Change background if active */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: rgba(255, 72, 2, 1);
   font-weight: 600;
- color: rgba(255, 72, 2, 1);
-  margin-bottom: 1rem;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &:hover {
+    background-color: #e0e0e0;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
 `;
 const SectionTitlele = styled.h2`
   font-size: 1.5rem;
@@ -1069,4 +1182,23 @@ const SectionContentleft = styled.p`
   font-weight: 400;
   text-align: left;
   color: #374151;
+`;
+const ImageWrapper1 = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-right: 0;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding-right: 2rem;
+  }
+`;
+
+const Image1 = styled.img`
+  text-align: center;
+  height: 400px;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 `;

@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import image1 from "../../public/Ever.jpg";
-import image2 from "../assets/image2.png";
-import Book from "../assets/book.png";
+import image1 from "../../public/Frontforans.png";
+import Book from "../../public/why.png";
 import { Link } from "react-router-dom";
-import Seoimage from "../assets/seo.png";
+import Seoimage from "../../public/digitalfrd.png";
 import { useNavigate } from "react-router-dom";
 const Blogsingle = () => {
   const data = [

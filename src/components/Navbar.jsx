@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Container>
-        <a href="#Home" style={{ textDecoration: "none" }}>
+        <a href="#" style={{ textDecoration: "none" }}>
           <Logo>
             <img src={Logo1} alt="logo" />
             <span>NPNG Tech</span>
@@ -82,12 +82,10 @@ const Navbar = () => {
           ))}
         </Menu>
         <SignupButton>
-          <a
-            href="#"
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+         
             Sign Up
-          </a>
+          </Link>
         </SignupButton>
       </Container>
     </Nav>

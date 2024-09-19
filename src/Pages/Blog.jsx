@@ -44,12 +44,13 @@ const Blog = () => {
     <div>
       <Nav>
         <Container>
-          <a href="#Home" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none" }}>
+
             <Logo>
               <img src={Logo1} alt="logo" />
               <span>NPNG Tech</span>
             </Logo>
-          </a>
+          </Link>
           <Hamburger onClick={toggleMenu}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </Hamburger>
@@ -79,12 +80,10 @@ const Blog = () => {
             ))}
           </Menu>
           <SignupButton>
-            <a
-              href="/signup"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              Sign Up
-            </a>
+          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+         
+         Sign Up
+       </Link>
           </SignupButton>
         </Container>
       </Nav>

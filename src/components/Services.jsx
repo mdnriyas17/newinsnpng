@@ -61,9 +61,9 @@ const Ourservicepage = () => {
     },
     {
       id: 5,
-      title: "POS Softwares",
+      title: "Digital Marketing",
       describtion:
-        "Revolutionize your business operations with our POS software solutions, delivering seamless transactions, robust inventory management, and enhanced customer experiences.",
+        "Social networking sites act as or more precisely, e-word of mouth. The Internet's ability to reach billions across the globe has given online word of mouth a powerful voice and far reach. buying patterns and product.",
       image: <TfiCommentAlt />,
       button: {
         text: "Read More →",
