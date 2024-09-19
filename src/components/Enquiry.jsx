@@ -108,7 +108,7 @@ const EnquiryPage = () => {
             </div>
           </FormGroup>
 
-          <Button type="submit" data-aos="fade-up" data-aos-delay="100">Send Enquiry</Button>
+          <Button type="submit" >Send Enquiry</Button>
         </form>
       </FormWrapper>
     </Container>
