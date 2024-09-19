@@ -592,7 +592,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 3,
+          id: 4,
           title: "Top Free Websites to Learn Digital Marketing",
           description:
             "For those looking to dive into digital marketing without breaking the bank, here are five excellent free resources to get started",
@@ -700,7 +700,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 4,
+          id: 5,
           title: "Career Opportunities in Digital Marketing",
           description:
             "As you become proficient in digital marketing, a variety of roles become available depending on your skills and expertise. Here are some common positions in the field, along with their average salary ranges in India (INR):",
@@ -903,7 +903,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 5,
+          id: 6,
           title:
             "Enhancing Your Digital Marketing Career: Key Aspects to Consider",
           description:
@@ -1040,7 +1040,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 6,
+          id: 7,
           title: "Mastering Digital Marketing: A Comprehensive Guide",
           content: [
             {
@@ -1152,7 +1152,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 7,
+          id: 8,
           title: "Roadmap to Mastering Digital Marketing",
           content: [
             {
@@ -1311,7 +1311,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 6,
+          id: 9,
           title: "Tools/Certifications to Focus On Throughout:",
           content: [
             {
@@ -1364,7 +1364,7 @@ const Dgitalblog = () => {
           ],
         },
         {
-          id: 7,
+          id: 10,
           title: "Conclusion",
           content: [
             {
@@ -1402,6 +1402,7 @@ const Dgitalblog = () => {
 
   // Toggle visibility function
   const toggleSectionVisibility = (id) => {
+    console.log(id);
     setVisibleSections((prevState) => ({
       ...prevState,
       [id]: !prevState[id], // Toggle the section visibility
