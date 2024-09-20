@@ -23,7 +23,7 @@ const Ourservicepage = () => {
       image: <FaMobileScreen />,
       button: {
         text: "Read More →",
-        link: "/sweeping",
+        link: "/mobile",
       },
     },
     {
@@ -34,7 +34,7 @@ const Ourservicepage = () => {
       image: <SiAmazonwebservices />,
       button: {
         text: "Read More →",
-        link: "/cleaning",
+        link: "/web",
       },
     },
     {
@@ -45,7 +45,7 @@ const Ourservicepage = () => {
       image: <HiOutlineBuildingOffice2 />,
       button: {
         text: "Read More →",
-        link: "/roofing",
+        link: "/uiux",
       },
     },
     {
@@ -56,18 +56,18 @@ const Ourservicepage = () => {
       image: <LiaIntercom />,
       button: {
         text: "Read More →",
-        link: "/sweeping",
+        link: "/ecom",
       },
     },
     {
       id: 5,
       title: "Digital Marketing",
       describtion:
-        "Social networking sites act as or more precisely, e-word of mouth. The Internet's ability to reach billions across the globe has given online word of mouth a powerful voice and far reach. buying patterns and product.",
+        "Our digital marketing solutions help businesses grow by reaching the right audience. We offer services like SEO and social media marketing to increase brand visibility and achieve measurable results.",
       image: <TfiCommentAlt />,
       button: {
         text: "Read More →",
-        link: "/cleaning",
+        link: "/Digital",
       },
     },
     {
@@ -78,7 +78,7 @@ const Ourservicepage = () => {
       image: <RiCustomerService2Line />,
       button: {
         text: "Read More →",
-        link: "/roofing",
+        link: "/Management",
       },
     },
   ];
@@ -113,12 +113,13 @@ const Ourservicepage = () => {
                 {ourservice.describtion}
               </p>
             </div>
-            {/* <Link
-              to={ourservice.button.link}
-              className="inline-block mt-6 px-4 py-2 text-white bg-blue-500 border border-blue-500 rounded hover:bg-blue-500 hover:text-white transition-colors duration-300"
+            <Link
+              to={ourservice?.button?.link}
+              onClick={() => window.scrollTo(top, 0)}
+              className="inline-block mt-6 px-4 py-2 text-white bg-custom-blue border border-custom-blue rounded hover:bg-custom-blue hover:text-white transition-colors duration-300"
             >
               {ourservice.button.text}
-            </Link> */}
+            </Link>
           </div>
         ))}
       </div>

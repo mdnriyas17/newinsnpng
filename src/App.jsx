@@ -4,8 +4,13 @@ import Home from "./Pages/Home";
 import { Routes, Route } from "react-router-dom";
 import Blogsingle from "./Pages/Singleblogs";
 import Blog from "./Pages/Blog";
-import Mobileapp from "./Pages/Mobileapp";
+import Mobileapp from "./section/Digital";
 import styled from "styled-components";
+import Webdevelop from "./section/Webdevelop";
+import MobileApp from "./section/Mobile";
+import UI from "./section/UI";
+import EcommerceApplications from "./section/Ecom";
+import ManagementSystems from "./section/Mam";
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
@@ -48,7 +53,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<Blogsingle />} />
-        <Route path="/mobileapp" element={<Mobileapp />} />
+        <Route path="/Digital" element={<Mobileapp />} />
+        <Route path="*" element={<Home />} />
+        <Route path="mobile" element={<MobileApp />} />
+        <Route path="web" element={<Webdevelop />} />
+        <Route path="uiux" element={<UI />} />
+        <Route path="ecom" element={<EcommerceApplications />} />
+        <Route path="Management" element={<ManagementSystems />} />
       </Routes>
       {/* <ChatButton onClick={toggleChatBox}>Chat</ChatButton>
       {isOpen && (
