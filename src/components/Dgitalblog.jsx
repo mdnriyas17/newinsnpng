@@ -1499,7 +1499,7 @@ const Dgitalblog = () => {
                 <SectionTitleleft>{section?.title}</SectionTitleleft>
                 <SectionContentleft>{section?.description}</SectionContentleft>
                 {section?.content?.map((subSection) => (
-                  <div key={subSection.id}>
+                  <div key={subSection?.id}>
                     <SectionTitlele>{subSection?.title}</SectionTitlele>
                     {subSection?.images ? (
                       <ImageWrapper1>
@@ -1509,7 +1509,7 @@ const Dgitalblog = () => {
                     <SectionContentleft>
                       {subSection?.content}
                       {subSection?.listitem
-                        ? subSection?.listitem.map((listItem) => (
+                        ? subSection?.listitem?.map((listItem) => (
                             <li key={listItem.id} style={{ marginLeft: "1rem" }}>
                               {listItem?.description}
                             </li>

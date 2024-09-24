@@ -10,10 +10,14 @@ import Subbanner from "../components/Subbanner";
 import styled from "styled-components";
 import Enquiry from "../components/Enquiry";
 import Testimonials from "../components/Testimonial";
+import Logo from "../../public/whatsapp.png";
 const Home = () => {
   return (
     <>
         <Navbar />
+       <a href="https://wa.me/+917200168369" target="_blank" rel="noopener noreferrer">
+       <img src={Logo} alt="logo" style={{ position: "fixed", width: "50px", height: "50px", bottom: "30px", zIndex: "999", right: "20px", marginTop: "0px" }} />
+       </a>
         <Section id="Home">
           <Banner />
         </Section>

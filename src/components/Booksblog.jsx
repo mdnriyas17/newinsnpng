@@ -161,7 +161,7 @@ const Booksblog = () => {
         },
         {
           id: 2,
-          title: "Health",
+          title: "Health Books",
           conttext:[
             {
               id: 1,
@@ -267,7 +267,7 @@ const Booksblog = () => {
         },
         {
           id: 3,
-          title: "Wealth",
+          title: "Wealth Books",
           conttext: [
             {
               id: 1,
@@ -491,7 +491,7 @@ const Booksblog = () => {
         },
         {
           id: 4,
-          title: "Time",
+          title: "Time Books",
           conttext:[
             {
               id: 1,
@@ -574,7 +574,7 @@ const Booksblog = () => {
         },
         {
           id: 5,
-          title: "Knowledge",
+          title: "Knowledge Books",
           conttext:[
             {
               id:1,
@@ -650,7 +650,7 @@ const Booksblog = () => {
         },
         {
           id: 6,
-          title: "Business",
+          title: "Business Books",
           conttext:[
             {
               id:1,

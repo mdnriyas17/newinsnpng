@@ -218,7 +218,7 @@ const ContactItem = styled.p`
 
 const FooterBottom = styled.div`
   text-align: center;
-  margin-top: 30px;
+  // margin-top: 30px;
   border-top: 1px solid #444;
   padding-top: 20px;
 
