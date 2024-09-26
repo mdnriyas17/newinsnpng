@@ -11,7 +11,11 @@ import {
   TwitterOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
-
+import Banner from "./web/Banner";
+import Content from "./web/Content";
+import HowWeWork from "./web/HowWeWork";
+import Technology from "./web/Technology";
+import FAQs from "./web/Faq";
 const MobileApp = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -153,7 +157,6 @@ const MobileApp = () => {
       },
     ],
   };
-  
 
   return (
     <>
@@ -184,7 +187,7 @@ const MobileApp = () => {
           </SignupButton>
         </Container1>
       </Nav>
-      <WebDevContainer>
+      {/* <WebDevContainer>
       <Title>Web Development</Title>
       <Subtitle>Welcome to Our Web Development Services</Subtitle>
       <Text>
@@ -260,7 +263,12 @@ const MobileApp = () => {
           </FAQAnswer>
         </FAQItem>
       </FAQSection>
-    </WebDevContainer>
+    </WebDevContainer> */}
+      <Banner  />
+      <Content />
+      <HowWeWork />
+      <Technology />
+      <FAQs />
       <FooterContainer id="Contact">
         <FooterContent>
           <FooterSection>
@@ -308,10 +316,16 @@ const MobileApp = () => {
           <FooterSection>
             <FooterTitle>Contact Us</FooterTitle>
             <FooterContact>
-              <a href="mailto:hello@npng.in" style={{ textDecoration: "none", color: "black" }}>
+              <a
+                href="mailto:hello@npng.in"
+                style={{ textDecoration: "none", color: "black" }}
+              >
                 <ContactItem>Email: hello@npng.in</ContactItem>
               </a>
-              <a href="tel:+917200168369" style={{ textDecoration: "none", color: "black" }}>
+              <a
+                href="tel:+917200168369"
+                style={{ textDecoration: "none", color: "black" }}
+              >
                 <ContactItem>Phone: +91 7200168369</ContactItem>
               </a>
               <ContactItem>
@@ -336,10 +350,7 @@ const WebDevContainer = styled.div`
   line-height: 1.6;
 `;
 
-
-
 // Subtitle or heading
-
 
 // Paragraph for general text
 const Text = styled.p`
@@ -353,7 +364,6 @@ const Text = styled.p`
 
 // Unordered list for the services
 
-
 // Section for "How We Work"
 const WorkProcessSection = styled.div`
   margin-top: 40px;
@@ -362,13 +372,10 @@ const WorkProcessSection = styled.div`
 // "Why Choose Us?" section
 const WhyChooseUsSection = styled.div`
   background-color: #fff;
-
 `;
 
 // Technology section
-const TechnologySection = styled.div`
-
-`;
+const TechnologySection = styled.div``;
 
 // FAQ section
 const FAQSection = styled.div`
@@ -554,6 +561,9 @@ const SignupButton = styled.button`
     text-decoration: none;
     color: white;
   }
+    @media (max-width: 768px) {
+    display: none;
+}
 `;
 
 const FooterContainer = styled.footer`
@@ -574,8 +584,6 @@ const FooterSection = styled.div`
   flex: 1;
   padding: 20px;
   min-width: 200px;
-
- 
 `;
 
 const FooterLogo = styled.div`

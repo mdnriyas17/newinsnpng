@@ -12,6 +12,12 @@ import {
   TwitterOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import Banner from "./digital/Banner";
+import Content from "./digital/Content";
+import HowWeWork from "./digital/HowWeWork";
+import Technology from "./digital/Technology";
+import FAQs from "./digital/Faq";
+
 const Mobileapp = () => {
   const data = {
     id: 1,
@@ -165,7 +171,7 @@ const Mobileapp = () => {
           </SignupButton>
         </Container1>
       </Nav>
-      <Container>
+      {/* <Container>
         <MainTitle>{data.title}</MainTitle>
         <Subtitle>{data?.Subtitle}</Subtitle>
         <Description>{data?.description}</Description>
@@ -184,7 +190,12 @@ const Mobileapp = () => {
             </List>
           </Section>
         ))}
-      </Container>
+      </Container> */}
+       <Banner />
+      <Content />
+      <HowWeWork />
+      <Technology />
+      <FAQs />
       <FooterContainer id="Contact">
       <FooterContent>
         <FooterSection>

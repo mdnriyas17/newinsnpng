@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -12,208 +11,213 @@ import {
   TwitterOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import Banner from "./ui/Banner";
+import Content from "./ui/Content";
+import HowWeWork from "./ui/HowWeWork";
+import Technology from "./ui/Technology";
+import FAQs from "./ui/Faq";
 const Mobileapp = () => {
-     const data = {
-        id: 2,
-        title: "UI/UX Designs",
-        Subtitle: "Discover Our UI/UX Solutions",
-        description:
-          "Welcome to our UI/UX design services. We focus on creating intuitive, user-friendly, and visually appealing interfaces that improve user experience and meet your business goals. Our team combines creativity with research-driven design principles to deliver solutions that engage and retain users.",
-        sections: [
+  const data = {
+    id: 2,
+    title: "UI/UX Designs",
+    Subtitle: "Discover Our UI/UX Solutions",
+    description:
+      "Welcome to our UI/UX design services. We focus on creating intuitive, user-friendly, and visually appealing interfaces that improve user experience and meet your business goals. Our team combines creativity with research-driven design principles to deliver solutions that engage and retain users.",
+    sections: [
+      {
+        id: 1,
+        title: "What We Offer",
+        listi: [
           {
             id: 1,
-            title: "What We Offer",
-            listi: [
-              {
-                id: 1,
-                describe:
-                  "User Research – We gather insights to understand your users and their needs.",
-              },
-              {
-                id: 2,
-                describe:
-                  "Wireframing – We create structural blueprints for your website or app.",
-              },
-              {
-                id: 3,
-                describe:
-                  "Prototyping – We build interactive mockups to visualize the final product.",
-              },
-              {
-                id: 4,
-                describe:
-                  "UI Design – We craft visually appealing interfaces that are easy to use.",
-              },
-              {
-                id: 5,
-                describe:
-                  "UX Strategy – We ensure a smooth and enjoyable user experience.",
-              },
-              {
-                id: 6,
-                describe:
-                  "Usability Testing – We test the design to ensure it meets user expectations.",
-              },
-            ],
+            describe:
+              "User Research – We gather insights to understand your users and their needs.",
           },
           {
             id: 2,
-            title: "How We Work",
-            listi: [
-              {
-                id: 1,
-                describe:
-                  "Discovery – We begin by understanding your business and user needs.",
-              },
-              {
-                id: 2,
-                describe:
-                  "Research – We conduct user research to gather insights and preferences.",
-              },
-              {
-                id: 3,
-                describe:
-                  "Wireframing – We create basic layouts to map out the user journey.",
-              },
-              {
-                id: 4,
-                describe:
-                  "Prototyping – We develop interactive prototypes to visualize the design.",
-              },
-              {
-                id: 5,
-                describe:
-                  "Testing – We perform usability testing to refine the design based on feedback.",
-              },
-              {
-                id: 6,
-                describe:
-                  "Final Design – After revisions, we deliver the final product, ensuring it aligns with your goals.",
-              },
-            ],
+            describe:
+              "Wireframing – We create structural blueprints for your website or app.",
           },
           {
             id: 3,
-            title: "Why Choose Us?",
-            listi: [
-              {
-                id: 1,
-                describe:
-                  "We create designs that look great and work perfectly. Our team listens to your needs and makes sure the final product meets your goals.",
-              },
-              {
-                id: 2,
-                describe:
-                  "We focus on making your website or app easy to use and enjoyable for your visitors.",
-              },
-              {
-                id: 3,
-                describe:
-                  "With us, you get a design that stands out and performs well.",
-              },
-            ],
+            describe:
+              "Prototyping – We build interactive mockups to visualize the final product.",
           },
           {
             id: 4,
-            title: "Technologies We Use",
-            listi: [
-              {
-                id: 1,
-                describe:
-                  "Figma – For designing and prototyping, enabling collaborative design and real-time feedback.",
-              },
-              {
-                id: 2,
-                describe:
-                  "Sketch – For creating high-quality UI designs and layouts with a user-friendly interface.",
-              },
-              {
-                id: 3,
-                describe:
-                  "Adobe XD – For building interactive prototypes that demonstrate user flows and interactions.",
-              },
-              {
-                id: 4,
-                describe:
-                  "InVision – For visualizing designs and gathering client feedback with interactive prototypes.",
-              },
-              {
-                id: 5,
-                describe:
-                  "Hotjar – For analyzing user behavior with heatmaps and session recordings to improve user experience.",
-              },
-              {
-                id: 6,
-                describe:
-                  "UsabilityHub – For testing design usability and gathering user opinions to refine our solutions.",
-              },
-            ],
+            describe:
+              "UI Design – We craft visually appealing interfaces that are easy to use.",
           },
           {
             id: 5,
-            title: "Our Approach to Providing UI/UX Design Services",
-            listi: [
-              {
-                id: 1,
-                describe:
-                  "Understanding Your Needs – We start by learning about your business goals and user needs.",
-              },
-              {
-                id: 2,
-                describe:
-                  "Research and Insights – We conduct research to gather insights about your target audience.",
-              },
-              {
-                id: 3,
-                describe:
-                  "Design and Prototyping – We create wireframes and prototypes to visualize the design and functionality.",
-              },
-              {
-                id: 4,
-                describe:
-                  "User Testing – We test the design with real users to ensure it’s intuitive and effective.",
-              },
-              {
-                id: 5,
-                describe:
-                  "Refinement and Finalization – We refine the design based on feedback and finalize it for delivery.",
-              },
-              {
-                id: 6,
-                describe:
-                  "Launch and Support – We help you launch the design and provide ongoing support to ensure everything runs smoothly.",
-              },
-            ],
+            describe:
+              "UX Strategy – We ensure a smooth and enjoyable user experience.",
           },
           {
             id: 6,
-            title: "FAQs Related to UI/UX Designs",
-            listi: [
-              {
-                id: 1,
-                describe:
-                  "Why is UI/UX design important for my business? Good UI/UX design helps attract and retain users by making your website or app easy to navigate, improving user satisfaction, and boosting engagement.",
-              },
-              {
-                id: 2,
-                describe:
-                  "How long does the design process take? The timeline depends on the complexity of the project. Typically, it can take a few weeks for a small project or several months for larger, more complex designs.",
-              },
-              {
-                id: 3,
-                describe:
-                  "Can I provide feedback during the design process? Yes, we value your input and work collaboratively with you to ensure the final design aligns with your vision and goals.",
-              },
-              {
-                id: 4,
-                describe:
-                  "How does UI/UX design improve my product? A well-designed UI/UX ensures your product is user-friendly, leading to increased user satisfaction, better retention, and improved business outcomes.",
-              },
-            ],
+            describe:
+              "Usability Testing – We test the design to ensure it meets user expectations.",
           },
         ],
-      };
-      
+      },
+      {
+        id: 2,
+        title: "How We Work",
+        listi: [
+          {
+            id: 1,
+            describe:
+              "Discovery – We begin by understanding your business and user needs.",
+          },
+          {
+            id: 2,
+            describe:
+              "Research – We conduct user research to gather insights and preferences.",
+          },
+          {
+            id: 3,
+            describe:
+              "Wireframing – We create basic layouts to map out the user journey.",
+          },
+          {
+            id: 4,
+            describe:
+              "Prototyping – We develop interactive prototypes to visualize the design.",
+          },
+          {
+            id: 5,
+            describe:
+              "Testing – We perform usability testing to refine the design based on feedback.",
+          },
+          {
+            id: 6,
+            describe:
+              "Final Design – After revisions, we deliver the final product, ensuring it aligns with your goals.",
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "Why Choose Us?",
+        listi: [
+          {
+            id: 1,
+            describe:
+              "We create designs that look great and work perfectly. Our team listens to your needs and makes sure the final product meets your goals.",
+          },
+          {
+            id: 2,
+            describe:
+              "We focus on making your website or app easy to use and enjoyable for your visitors.",
+          },
+          {
+            id: 3,
+            describe:
+              "With us, you get a design that stands out and performs well.",
+          },
+        ],
+      },
+      {
+        id: 4,
+        title: "Technologies We Use",
+        listi: [
+          {
+            id: 1,
+            describe:
+              "Figma – For designing and prototyping, enabling collaborative design and real-time feedback.",
+          },
+          {
+            id: 2,
+            describe:
+              "Sketch – For creating high-quality UI designs and layouts with a user-friendly interface.",
+          },
+          {
+            id: 3,
+            describe:
+              "Adobe XD – For building interactive prototypes that demonstrate user flows and interactions.",
+          },
+          {
+            id: 4,
+            describe:
+              "InVision – For visualizing designs and gathering client feedback with interactive prototypes.",
+          },
+          {
+            id: 5,
+            describe:
+              "Hotjar – For analyzing user behavior with heatmaps and session recordings to improve user experience.",
+          },
+          {
+            id: 6,
+            describe:
+              "UsabilityHub – For testing design usability and gathering user opinions to refine our solutions.",
+          },
+        ],
+      },
+      {
+        id: 5,
+        title: "Our Approach to Providing UI/UX Design Services",
+        listi: [
+          {
+            id: 1,
+            describe:
+              "Understanding Your Needs – We start by learning about your business goals and user needs.",
+          },
+          {
+            id: 2,
+            describe:
+              "Research and Insights – We conduct research to gather insights about your target audience.",
+          },
+          {
+            id: 3,
+            describe:
+              "Design and Prototyping – We create wireframes and prototypes to visualize the design and functionality.",
+          },
+          {
+            id: 4,
+            describe:
+              "User Testing – We test the design with real users to ensure it’s intuitive and effective.",
+          },
+          {
+            id: 5,
+            describe:
+              "Refinement and Finalization – We refine the design based on feedback and finalize it for delivery.",
+          },
+          {
+            id: 6,
+            describe:
+              "Launch and Support – We help you launch the design and provide ongoing support to ensure everything runs smoothly.",
+          },
+        ],
+      },
+      {
+        id: 6,
+        title: "FAQs Related to UI/UX Designs",
+        listi: [
+          {
+            id: 1,
+            describe:
+              "Why is UI/UX design important for my business? Good UI/UX design helps attract and retain users by making your website or app easy to navigate, improving user satisfaction, and boosting engagement.",
+          },
+          {
+            id: 2,
+            describe:
+              "How long does the design process take? The timeline depends on the complexity of the project. Typically, it can take a few weeks for a small project or several months for larger, more complex designs.",
+          },
+          {
+            id: 3,
+            describe:
+              "Can I provide feedback during the design process? Yes, we value your input and work collaboratively with you to ensure the final design aligns with your vision and goals.",
+          },
+          {
+            id: 4,
+            describe:
+              "How does UI/UX design improve my product? A well-designed UI/UX ensures your product is user-friendly, leading to increased user satisfaction, better retention, and improved business outcomes.",
+          },
+        ],
+      },
+    ],
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -251,9 +255,7 @@ const Mobileapp = () => {
   //   };
   // }, []);
 
-  const navlist = [
-    { name: "Home", link: "/" },
-  ];
+  const navlist = [{ name: "Home", link: "/" }];
 
   return (
     <>
@@ -272,13 +274,7 @@ const Mobileapp = () => {
             {navlist.map((item, index) => (
               <MenuItem key={index}>
                 {item.link ? (
-                  <Link
-                  
-                    to={`${item.link}`}
-                  
-                  >
-                    {item.name}
-                  </Link>
+                  <Link to={`${item.link}`}>{item.name}</Link>
                 ) : (
                   <Link onClick={toggleMenu} to={`/${item.navslink}`}>
                     {item.name}
@@ -288,14 +284,13 @@ const Mobileapp = () => {
             ))}
           </Menu>
           <SignupButton>
-          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-         
-         Sign Up
-       </Link>
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+              Sign Up
+            </Link>
           </SignupButton>
         </Container1>
       </Nav>
-      <Container>
+      {/* <Container>
       <Title>UI/UX Designs</Title>
 
       <Section>
@@ -383,42 +378,47 @@ const Mobileapp = () => {
           </Answer>
         </FAQItem>
       </Section>
-    </Container>
+    </Container> */}
+      <Banner />
+      <Content />
+      <HowWeWork />
+      <Technology />
+      <FAQs />
       <FooterContainer id="Contact">
-      <FooterContent>
-        <FooterSection>
-          <FooterLogo>
-            <img src={Logo1} alt="logo" />
-            <a href="#" style={{ textDecoration: "none" }}>
-              <CompanyName>NPNG Tech</CompanyName>
-            </a>
-          </FooterLogo>
-          <FooterDescription>
-            Have an idea or an epic project in mind? Talk to us. Let's work
-            together and make something great. Drop us a line at
-          </FooterDescription>
-          <SocialIcons>
-            <SocialIcon
-              href="https://www.facebook.com/profile.php?id=61556940022825&mibextid=ZbWKwL"
-              target="_blank"
-            >
-              <FacebookOutlined />
-            </SocialIcon>
-            <SocialIcon
-              href="https://www.instagram.com/npng_tech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-              target="_blank"
-            >
-              <InstagramOutlined />
-            </SocialIcon>
-            <SocialIcon
-              href="https://www.linkedin.com/company/npng-tech-work"
-              target="_blank"
-            >
-              <LinkedinOutlined />
-            </SocialIcon>
-          </SocialIcons>
-        </FooterSection>
-        {/* 
+        <FooterContent>
+          <FooterSection>
+            <FooterLogo>
+              <img src={Logo1} alt="logo" />
+              <a href="#" style={{ textDecoration: "none" }}>
+                <CompanyName>NPNG Tech</CompanyName>
+              </a>
+            </FooterLogo>
+            <FooterDescription>
+              Have an idea or an epic project in mind? Talk to us. Let's work
+              together and make something great. Drop us a line at
+            </FooterDescription>
+            <SocialIcons>
+              <SocialIcon
+                href="https://www.facebook.com/profile.php?id=61556940022825&mibextid=ZbWKwL"
+                target="_blank"
+              >
+                <FacebookOutlined />
+              </SocialIcon>
+              <SocialIcon
+                href="https://www.instagram.com/npng_tech?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+              >
+                <InstagramOutlined />
+              </SocialIcon>
+              <SocialIcon
+                href="https://www.linkedin.com/company/npng-tech-work"
+                target="_blank"
+              >
+                <LinkedinOutlined />
+              </SocialIcon>
+            </SocialIcons>
+          </FooterSection>
+          {/* 
         <FooterSection>
           <FooterTitle>PRODUCTS</FooterTitle>
           <FooterLinks>
@@ -429,34 +429,44 @@ const Mobileapp = () => {
           </FooterLinks>
         </FooterSection> */}
 
-        <FooterSection>
-          <FooterTitle>Quick Links</FooterTitle>
-          <FooterLinks>
-            <FooterLink href=""><Link to={"/"} onClick={() => window.scrollTo(top, 0)}>Home</Link> </FooterLink>
-          </FooterLinks>
-        </FooterSection>
+          <FooterSection>
+            <FooterTitle>Quick Links</FooterTitle>
+            <FooterLinks>
+              <FooterLink href="">
+                <Link to={"/"} onClick={() => window.scrollTo(top, 0)}>
+                  Home
+                </Link>{" "}
+              </FooterLink>
+            </FooterLinks>
+          </FooterSection>
 
-        <FooterSection>
-          <FooterTitle>Contact Us</FooterTitle>
-          <FooterContact>
-            <a href="mailto:hello@npng.in" style={{ textDecoration: "none", color: "black" }}>
-              <ContactItem>Email:hello@npng.in</ContactItem>
-            </a>
-            <a href="tel: +91 7200168369" style={{ textDecoration: "none", color: "black" }}>
-              <ContactItem>Phone: +91 7200168369</ContactItem>
-            </a>
-            <ContactItem>
-              Address: No 18, 2nd St, Balakrishnapuram, Adambakkam, Ramapuram,
-              Chennai, Tamil Nadu 600088
-            </ContactItem>
-          </FooterContact>
-        </FooterSection>
-      </FooterContent>
+          <FooterSection>
+            <FooterTitle>Contact Us</FooterTitle>
+            <FooterContact>
+              <a
+                href="mailto:hello@npng.in"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <ContactItem>Email:hello@npng.in</ContactItem>
+              </a>
+              <a
+                href="tel: +91 7200168369"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <ContactItem>Phone: +91 7200168369</ContactItem>
+              </a>
+              <ContactItem>
+                Address: No 18, 2nd St, Balakrishnapuram, Adambakkam, Ramapuram,
+                Chennai, Tamil Nadu 600088
+              </ContactItem>
+            </FooterContact>
+          </FooterSection>
+        </FooterContent>
 
-      <FooterBottom>
-        <p>&copy; 2024 NPNG Tech. All rights reserved.</p>
-      </FooterBottom>
-    </FooterContainer>
+        <FooterBottom>
+          <p>&copy; 2024 NPNG Tech. All rights reserved.</p>
+        </FooterBottom>
+      </FooterContainer>
     </>
   );
 };
@@ -810,6 +820,5 @@ const FooterBottom = styled.div`
     font-size: 14px;
   }
 `;
-
 
 export default Mobileapp;

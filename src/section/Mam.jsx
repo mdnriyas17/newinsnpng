@@ -11,6 +11,11 @@ import {
   TwitterOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import Banner from "./mag/Banner"
+import Content from "./mag/Content"
+import HowWeWork from "./mag/HowWeWork"
+import Technology from "./mag/Technology"
+import FAQs from "./mag/Faq"
 const Container = styled.div`
   padding: 50px;
   background-color: #f9f9f9;
@@ -399,7 +404,7 @@ const ManagementSystems = () => {
           </SignupButton>
         </Container1>
       </Nav>
-    <Container>
+    {/* <Container>
       <Title>Management Systems</Title>
       <Section>
         <Subtitle>Transform Your Business with Our Management Systems</Subtitle>
@@ -488,7 +493,12 @@ const ManagementSystems = () => {
           </Answer>
         </FAQItem>
       </Section>
-    </Container>
+    </Container> */}
+    <Banner />
+      <Content />
+      <HowWeWork />
+      <Technology />
+      <FAQs />
     <FooterContainer id="Contact">
       <FooterContent>
         <FooterSection>

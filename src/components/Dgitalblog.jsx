@@ -1496,28 +1496,30 @@ const Dgitalblog = () => {
             {/* Always visible section for "Introduction to Digital Marketing" */}
             {section?.title === "Introduction to Digital Marketing" ? (
               <>
-                <SectionTitleleft>{section?.title}</SectionTitleleft>
-                <SectionContentleft>{section?.description}</SectionContentleft>
+                <SectionTitleleft1>{section?.title}</SectionTitleleft1>
+                <SectionContentleft1>{section?.description}</SectionContentleft1>
                 {section?.content?.map((subSection) => (
-                  <div key={subSection?.id}>
-                    <SectionTitlele>{subSection?.title}</SectionTitlele>
-                    {subSection?.images ? (
-                      <ImageWrapper1>
-                        <Image1 src={subSection?.images} />
-                      </ImageWrapper1>
-                    ) : null}
-                    <SectionContentleft>
-                      {subSection?.content}
-                      {subSection?.listitem
-                        ? subSection?.listitem?.map((listItem) => (
-                            <li key={listItem.id} style={{ marginLeft: "1rem" }}>
-                              {listItem?.description}
-                            </li>
-                          ))
-                        : null}
-                    </SectionContentleft>
-                  </div>
-                ))}
+  <SubSectionWrapper key={subSection?.id}>
+    {subSection?.images ? (
+      <ImageWrapper>
+        <Image src={subSection?.images} />
+      </ImageWrapper>
+    ) : null}
+    <TextContentWrapper>
+      <SectionTitle>{subSection?.title}</SectionTitle>
+      <SectionContent>
+        {subSection?.content}
+        {subSection?.listitem
+          ? subSection?.listitem?.map((listItem) => (
+              <ListItem key={listItem.id}>
+                {listItem?.description}
+              </ListItem>
+            ))
+          : null}
+      </SectionContent>
+    </TextContentWrapper>
+  </SubSectionWrapper>
+))}
               </>
             ) : (
               <>
@@ -1567,6 +1569,63 @@ const Dgitalblog = () => {
 
 export default Dgitalblog;
 
+const SubSectionWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  flex: 1;
+  margin-right: 2rem;
+align-self: center;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+`;
+
+const Image = styled.img`
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  @media (max-width: 768px) {
+    width: 500px;
+    height: auto;
+    
+    max-height: 300px;
+  }
+`;
+
+const TextContentWrapper = styled.div`
+  flex: 2;
+`;
+
+const SectionTitle = styled.h2`
+  font-size: 1.5rem;
+  color: rgba(10, 13, 80, 1);
+  font-weight: 600;
+  font-weight: bold;
+  margin-bottom: 1rem;
+`;
+
+const SectionContent = styled.div`
+  font-size: 1rem;
+  color: #555;
+`;
+
+const ListItem = styled.li`
+  margin-left: 1rem;
+  list-style: none;
+  font-size: 1rem;
+  text-align: left;
+  color: #555;
+`;
+
 const BlogContainer = styled.div`
   background-color: white;
   padding-bottom: 3rem;
@@ -1597,14 +1656,7 @@ const SectionContainer = styled.div`
   margin-top: 2.5rem;
 `;
 
-const ImageWrapper = styled.div`
-  flex: 1;
-  padding-right: 0;
 
-  @media (min-width: 768px) {
-    padding-right: 2rem;
-  }
-`;
 const ImageWrapper1 = styled.div`
   display: flex;
   justify-content: center;
@@ -1624,13 +1676,7 @@ const Image1 = styled.img`
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 `;
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-`;
+
 
 const SectionTitlele = styled.h2`
   font-size: 1.5rem;
@@ -1658,10 +1704,26 @@ const SectionTitleleft = styled.h2`
 
   }
 `;
+const SectionTitleleft1 = styled.h2`
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: rgba(255, 72, 2, 1);
+  text-align: center;
+
+  @media (min-width: 640px) {
+    font-size: 3rem;
+  }
+`;
 
 const SectionContentleft = styled.p`
   font-size: 1.07rem;
   font-weight: 400;
   text-align: left;
   color: #374151;
+`;
+const SectionContentleft1 = styled.p`
+    margin-top: 1rem;
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: center;
 `;
