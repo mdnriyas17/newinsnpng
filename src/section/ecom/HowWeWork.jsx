@@ -32,7 +32,7 @@ const HowWeWork = () => {
   return (
     <section className="how-we-work">
       <h2>How We Work</h2>
-      <div className="steps-container">
+      <div className="steps-container1">
         {steps.map((step, index) => (
           <div className="step-card" key={index}>
             <h3>{step.title}</h3>

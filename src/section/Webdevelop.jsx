@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Logo1 from "../../public/large.png";
+import Logow from "../../public/whatsapp.png"
+
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -161,6 +163,25 @@ const MobileApp = () => {
   return (
     <>
       <Nav>
+      <a 
+  href="https://wa.me/+917200168369?text=Hi%2C%20I%20want%20some%20services" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <img 
+    src={Logow} 
+    alt="logo" 
+    style={{ 
+      position: "fixed", 
+      width: "50px", 
+      height: "50px", 
+      bottom: "30px", 
+      zIndex: "999", 
+      right: "20px", 
+      marginTop: "0px" 
+    }} 
+  />
+</a>
         <Container1>
           <Link to="/" style={{ textDecoration: "none" }}>
             <Logo>
@@ -638,7 +659,7 @@ const FooterLink = styled.a`
   font-size: 1rem;
   color: black;
   text-decoration: none;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
 
   &:hover {
     color: orange;
@@ -653,14 +674,12 @@ const FooterContact = styled.div`
 const ContactItem = styled.p`
   font-size: 1rem;
   color: black;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
 `;
 
 const FooterBottom = styled.div`
   text-align: center;
-  margin-top: 20px;
   border-top: 1px solid #ddd;
-  padding-top: 20px;
 
   p {
     font-size: 0.8rem;

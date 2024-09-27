@@ -12,6 +12,12 @@ import {
   TwitterOutlined,
   LinkedinOutlined,
 } from "@ant-design/icons";
+import Logow from "../../public/whatsapp.png"
+import Banner from "./mobile/Banner"
+import Content from "./mobile/Content"
+import HowWeWork from "./mobile/HowWeWork"
+import Technology from "./mobile/Technology"
+import FAQs from "./mobile/Faq"
 const MobileApp = () => {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -97,6 +103,25 @@ const MobileApp = () => {
   return (
     <>
        <Nav>
+       <a 
+  href="https://wa.me/+917200168369?text=Hi%2C%20I%20want%20some%20services" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <img 
+    src={Logow} 
+    alt="logo" 
+    style={{ 
+      position: "fixed", 
+      width: "50px", 
+      height: "50px", 
+      bottom: "30px", 
+      zIndex: "999", 
+      right: "20px", 
+      marginTop: "0px" 
+    }} 
+  />
+</a>
         <Container1>
           <Link to="/" style={{ textDecoration: "none" }}>
             <Logo>
@@ -134,7 +159,7 @@ const MobileApp = () => {
           </SignupButton>
         </Container1>
       </Nav>
-      <Container>
+      {/* <Container>
         <Title>{data.title}</Title>
         <Subtitle>{data.Subtitle}</Subtitle>
         <Description>{data.description}</Description>
@@ -152,7 +177,15 @@ const MobileApp = () => {
             </List>
           </Section>
         ))}
+      </Container> */}
+      <Container>
+      <Banner />
+      <Content />
+      <HowWeWork />
+      <Technology />
+      <FAQs />
       </Container>
+     
       <FooterContainer id="Contact">
       <FooterContent>
         <FooterSection>

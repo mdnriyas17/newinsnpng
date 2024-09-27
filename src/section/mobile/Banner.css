@@ -1,0 +1,140 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: linear-gradient(135deg, rgb(8, 19, 65), rgb(65, 33, 97));
+  color: white;
+  height: 100vh;
+  position: relative;
+}
+
+.banner-content {
+  flex: 1;
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner-details {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: rgb(235, 106, 7);
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.banner-description {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 750px;
+  color: aliceblue;
+}
+
+.banner-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.banner-button:hover {
+  background-color: #0056b3;
+}
+
+.banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+  filter: brightness(1.2);
+}
+
+/* Media Queries for Tablet and Mobile */
+@media (max-width: 1024px) {
+  .banner {
+    padding: 50px 20px;
+  }
+
+  .banner-title {
+    font-size: 4rem;
+  }
+
+  .banner-details {
+    font-size: 1.5rem;
+  }
+
+  .banner-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .banner-content {
+    margin-bottom: 30px;
+  }
+
+  .banner-title {
+    font-size: 3rem;
+  }
+
+  .banner-details {
+    font-size: 1.2rem;
+  }
+
+  .banner-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .banner-image {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 15px;
+    height: auto;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-details {
+    font-size: 1rem;
+  }
+
+  .banner-description {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .banner-button {
+    padding: 8px 16px;
+  }
+
+  .banner-image img {
+    max-width: 90%;
+  }
+}

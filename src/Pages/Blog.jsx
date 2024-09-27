@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo1 from "../../public/large.png";
+import Logow from "../../public/whatsapp.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Blogs from "../components/Testimonial";
 import Footer from "../components/Footer";
@@ -43,6 +44,9 @@ const Blog = () => {
   return (
     <div>
       <Nav>
+      <a href="https://wa.me/+917200168369" target="_blank" rel="noopener noreferrer">
+       <img src={Logow} alt="logo" style={{ position: "fixed", width: "50px", height: "50px", bottom: "30px", zIndex: "999", right: "20px", marginTop: "0px" }} />
+       </a>
         <Container>
           <Link to="/" style={{ textDecoration: "none" }}>
 

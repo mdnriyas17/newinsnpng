@@ -1,0 +1,111 @@
+.circle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the circles on smaller screens */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-right: 20px;
+  margin-bottom: 60px;
+}
+
+.main-heading {
+  text-align: center; 
+  font-size: 2.2rem; /* Slightly smaller font for better scaling */
+  font-weight: bold; 
+  margin-bottom: 20px;
+  color: #f94444;
+  margin-top: 100px;
+  letter-spacing: 1.5px;
+  font-family: Montserrat;
+  font-weight: 900;
+}
+
+.circle {
+  width: 150px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #4B0082;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.circle h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.circle p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+  .circle {
+    width: 220px; /* Increase circle size on large screens */
+    height: 300px;
+    flex-basis: calc(33.33% - 40px);
+  }
+
+  .main-heading {
+    font-size: 3rem;
+    margin-top: 140px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .circle {
+    flex-basis: calc(33.33% - 40px); /* Adjust for tablets */
+    width: 180px;
+    height: 270px;
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 767px) {
+  .circle {
+    flex-basis: calc(50% - 20px); /* 2 circles per row on mobile */
+    width: 140px;
+    height: 220px;
+  }
+
+  .main-heading {
+    font-size: 2rem; /* Smaller font for mobile */
+    margin-top: 80px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .circle {
+    flex-basis: calc(100% - 20px); /* 1 circle per row on very small screens */
+    width: 100px;
+    height: 180px;
+  }
+
+  .main-heading {
+    font-size: 1.8rem;
+    margin-top: 60px;
+  }
+}

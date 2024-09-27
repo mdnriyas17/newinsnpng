@@ -11,4 +11,6 @@ body{
   margin: 0%;
   transition: background-color 1.5s ease-in-out, color 1.5s ease-in-out;
   font-family: "Montserrat";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

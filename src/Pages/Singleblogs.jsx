@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo1 from "../../public/large.png";
+import Logow from "../../public/whatsapp.png"
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -50,6 +51,26 @@ const Blog = () => {
   return (
     <>
       <Nav>
+      <a 
+  href="https://wa.me/+917200168369?text=Hi%2C%20I%20want%20some%20services" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <img 
+    src={Logow} 
+    alt="logo" 
+    style={{ 
+      position: "fixed", 
+      width: "50px", 
+      height: "50px", 
+      bottom: "30px", 
+      zIndex: "999", 
+      right: "20px", 
+      marginTop: "0px" 
+    }} 
+  />
+</a>
+
         <Container>
           <Link to="/" style={{ textDecoration: "none" }}>
             <Logo>

@@ -1,0 +1,116 @@
+.how-we-work-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 40px;
+}
+
+.sections-title {
+  font-size: 2.5rem;
+  color: #f94444;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: Montserrat;
+  font-weight: 900;
+}
+
+/* Flexbox for larger screens */
+.steps-container {
+  display: flex;
+  flex-direction: column; /* Set column direction by default */
+  gap: 20px;
+  width: 100%;
+  align-items: center; /* Center-align for smaller screens */
+}
+
+.step-box {
+  background-color: #4B0082;
+  padding: 30px 20px;
+  border-radius: 60px;
+  width: 100%;
+  max-width: 900px; /* Limit max width for larger screens */
+  color: #fff;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to left for readability */
+}
+
+.step-box:hover {
+  transform: translateY(-10px);
+}
+
+.step-box h3 {
+  font-size: 2.5rem; /* Adjusted for better readability */
+  margin-bottom: 10px;
+  color: #ff00e0;
+}
+
+.step-box p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.step-box span {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1024px) {
+  .step-box {
+    width: 90%; /* Adjusted for better tablet responsiveness */
+  }
+
+  .sections-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .steps-container {
+    flex-direction: column; /* Maintain column direction on smaller screens */
+  }
+
+  .step-box {
+    width: 90%;
+    padding: 25px 15px;
+  }
+
+  .sections-title {
+    font-size: 2rem; /* Slightly smaller font size on mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .step-box {
+    width: 94%;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  .step-box h3 {
+    font-size: 2rem; /* Adjust for small screen readability */
+  }
+
+  .step-box p {
+    font-size: 1.3rem; /* Slightly smaller paragraph font for mobile */
+  }
+
+  .step-box span {
+    font-size: 1rem;
+  }
+
+  .how-we-work-container {
+    margin-top: 30px;
+  }
+
+  .sections-title {
+    font-size: 1.8rem; /* Reduce title size for smaller screens */
+  }
+}

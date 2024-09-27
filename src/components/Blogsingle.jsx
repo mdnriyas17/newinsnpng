@@ -6,6 +6,7 @@ import styled from "styled-components";
 import TechinduBlog from "./TechinduBlog";
 import Dgitalblog from "./Dgitalblog";
 import Booksblog from "./Booksblog";
+import Blog4 from "../Pages/blogfour";
 const Blogsingle = () => {
   const { id } = useParams();
   const blogId = parseInt(id);
@@ -21,7 +22,7 @@ const Blogsingle = () => {
     <TechinduBlog />
   ) : blogId == 2 ? (
     <Dgitalblog />
-  ) : blogId == 3 ? <Booksblog /> : (
+  ) : blogId == 3 ? <Booksblog /> : blogId == 4 ? <Blog4 /> : (
     <h2
       style={{
         textAlign: "center",

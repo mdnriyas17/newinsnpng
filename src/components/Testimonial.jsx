@@ -5,6 +5,7 @@ import image1 from "../../public/Frontforans.png";
 import Book from "../../public/why.png";
 import { Link } from "react-router-dom";
 import Seoimage from "../../public/digitalfrd.png";
+import Blog4img from "../../public/images/blo.png.jpg"
 import { useNavigate } from "react-router-dom";
 const Blogsingle = () => {
   const data = [
@@ -27,13 +28,17 @@ const Blogsingle = () => {
       title: "Why Reading Books Can Transform Your Life",
       description:"In today's fast-paced world, where information is available at our fingertips, many people underestimate the power of reading books. But here's the truth: countless billionaires, leaders, and successful entrepreneurs credit much of their success to reading. Bill Gates, Warren Buffett, Elon Musk, and Oprah Winfrey, to name just a few, all have one thing in common—an insatiable thirst for knowledge through reading.",
       images: Book,
+    },{
+      id: 4,
+      title: "Determining the Number of People to Meet",
+      description: "To target 100 billion in sales over the next 10 years, you need to estimate the number of people to meet. This is a difficult task",
+      images: Blog4img
     }
   ];
 
   useEffect(() => {
     AOS.init({ duration: 1200 });
   }, []);
-
   const navigate = useNavigate();
 
   const handleClick = (id) => {

@@ -16,6 +16,8 @@ import Content from "./mag/Content"
 import HowWeWork from "./mag/HowWeWork"
 import Technology from "./mag/Technology"
 import FAQs from "./mag/Faq"
+import Logow from "../../public/whatsapp.png"
+
 const Container = styled.div`
   padding: 50px;
   background-color: #f9f9f9;
@@ -367,6 +369,25 @@ const ManagementSystems = () => {
   return (
     <>
     <Nav>
+    <a 
+  href="https://wa.me/+917200168369?text=Hi%2C%20I%20want%20some%20services" 
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <img 
+    src={Logow} 
+    alt="logo" 
+    style={{ 
+      position: "fixed", 
+      width: "50px", 
+      height: "50px", 
+      bottom: "30px", 
+      zIndex: "999", 
+      right: "20px", 
+      marginTop: "0px" 
+    }} 
+  />
+</a>
         <Container1>
           <Link to="/" style={{ textDecoration: "none" }}>
             <Logo>
