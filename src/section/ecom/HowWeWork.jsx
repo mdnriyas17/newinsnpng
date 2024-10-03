@@ -1,6 +1,59 @@
 import React from 'react';
-import './HowWeWork.css';
+import styled from 'styled-components';
 
+// Styled Components
+const Section = styled.section`
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 60px 40px; /* More padding on larger screens */
+  }
+`;
+
+const Title = styled.h2`
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333; /* Main text color */
+`;
+
+const StepsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between steps */
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+  }
+`;
+
+const StepCard = styled.div`
+  background: #fff; /* White background for cards */
+  border: 1px solid #ddd; /* Light border for separation */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Smooth hover effect */
+
+  &:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: rgba(10, 13, 80, 1); /* Title color */
+    margin-bottom: 10px; /* Space below title */
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555; /* Description color */
+    text-align: left;
+  }
+`;
+
+// HowWeWork Component
 const HowWeWork = () => {
   const steps = [
     {
@@ -30,17 +83,17 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className="how-we-work">
-      <h2>How We Work</h2>
-      <div className="steps-container1">
+    <Section>
+      <Title>How We Work</Title>
+      <StepsContainer>
         {steps.map((step, index) => (
-          <div className="step-card" key={index}>
+          <StepCard key={index}>
             <h3>{step.title}</h3>
             <p>{step.description}</p>
-          </div>
+          </StepCard>
         ))}
-      </div>
-    </section>
+      </StepsContainer>
+    </Section>
   );
 };
 

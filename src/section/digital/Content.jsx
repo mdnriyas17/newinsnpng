@@ -1,5 +1,98 @@
 import React from 'react';
 import styled from 'styled-components';
+
+// Styled Components
+const ContentSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: left;
+
+  @media (min-width: 768px) {
+    padding: 60px 80px;
+  }
+`;
+
+const LeftBox = styled.div`
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+`;
+
+const LeftHeading = styled.h2`
+  font-size: 1.8rem;
+  color: #1d3557;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    font-size: 2.2rem;
+  }
+`;
+
+const ContentPara = styled.p`
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6c757d;
+  text-align: left;
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+  }
+`;
+
+const BoxContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr; /* Single column on small screens */
+  gap: 20px; /* Gap between items */
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr; /* Two columns on medium screens */
+    gap: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns on larger screens */
+  }
+`;
+
+const OfferBox = styled.div`
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+`;
+
+const BoxHeading = styled.h3`
+  font-size: 1.4rem;
+  color: #1d3557;
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    font-size: 1.6rem;
+  }
+`;
+
+const BoxSubheading = styled.p`
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #6c757d;
+  text-align: left;
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+`;
+
+// Content Component
 const Content = () => {
   const services = [
     { heading: "Search Engine Optimization (SEO)", description: "Boost your website’s visibility on search engines and drive organic traffic." },
@@ -35,119 +128,3 @@ const Content = () => {
 };
 
 export default Content;
-
-export const ContentSection = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: 768px) {
-    padding: 30px 15px;
-  }
-`;
-
-export const LeftBox = styled.div`
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 2px solid #5f47e3;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
-`;
-
-export const LeftHeading = styled.h2`
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #f8612b;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
-`;
-
-export const ContentPara = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #071330;
-  text-align: justify;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-  }
-`;
-
-export const BoxContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-export const OfferBox = styled.div`
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 10px;
-  }
-`;
-
-export const BoxHeading = styled.h3`
-  font-size: 1.5rem;
-  color: #5f47e3;
-  margin-bottom: 10px;
-
-  @media (max-width: 768px) {
-    font-size: 1.3rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.1rem;
-  }
-`;
-
-export const BoxSubheading = styled.p`
-  font-size: 1rem;
-  color: #071330;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.85rem;
-  }
-`;

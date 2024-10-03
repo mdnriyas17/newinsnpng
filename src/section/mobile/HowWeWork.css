@@ -29,7 +29,7 @@
 .step-box {
   background-color: #4B0082;
   padding: 30px 20px;
-  border-radius: 60px;
+  border-radius: 5px;
   width: 100%;
   max-width: 900px; /* Limit max width for larger screens */
   color: #fff;

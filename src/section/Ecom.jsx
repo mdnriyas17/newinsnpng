@@ -116,7 +116,6 @@ const Container = styled.div`
   padding: 40px;
   margin-top: 70px;
   background-color: #f9f9f9;
-  font-family: "Arial", sans-serif;
 `;
 
 const Title = styled.h1`
@@ -230,7 +229,6 @@ const Logo = styled.div`
   span {
     font-size: 1.5rem;
     color: rgba(10, 13, 80, 1);
-    font-family: "JejuGothic";
   }
 `;
 
@@ -375,7 +373,6 @@ const FooterLogo = styled.div`
 `;
 
 const CompanyName = styled.h2`
-  font-family: "JejuGothic";
   font-size: 24px;
   font-weight: bold;
   color: black;

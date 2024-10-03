@@ -1,6 +1,6 @@
 import React from 'react';
 import './HowWeWork.css';
-
+import styled from 'styled-components';
 const HowWeWork = () => {
   const steps = [
     {
@@ -31,18 +31,66 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className="how-we-work">
-      <h2>How We Work</h2>
-      <div className="steps-container1">
-        {steps.map((step, index) => (
-          <div className="step-card" key={index}>
-            <h3>{step.title}</h3>
-            <p>{step.description}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <HowWeWorkSection>
+    <SectionTitle>How We Work</SectionTitle>
+    <StepsContainer>
+      {steps.map((step, index) => (
+        <StepCard key={index}>
+          <h3>{step.title}</h3>
+          <p>{step.description}</p>
+        </StepCard>
+      ))}
+    </StepsContainer>
+  </HowWeWorkSection>
   );
 };
 
 export default HowWeWork;
+const HowWeWorkSection = styled.section`
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Light background */
+  text-align: center;
+`;
+
+const SectionTitle = styled.h2`
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+`;
+
+const StepsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout for smaller screens */
+  gap: 20px; /* Space between step cards */
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+  }
+`;
+
+const StepCard = styled.div`
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+  &:hover {
+    transform: translateY(-10px); /* Hover effect */
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1d3557;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+`;

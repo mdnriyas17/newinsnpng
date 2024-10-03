@@ -66,7 +66,7 @@ const Blogsingle = () => {
             <h2 className="text-3xl font-extrabold tracking-tight text-orange-600 sm:text-4xl">
               Our Blogs
             </h2>
-            <p className="mt-4 text-lg text-gray-500">
+            <p className="mt-4 text-lg text-gray-500 text-left " >
               Dive into a collection of insightful articles, updates, and expert perspectives on various topics. Stay informed and inspired with our latest posts, featuring rich content, engaging visuals, and valuable information to keep you ahead in your field.
             </p>
           </div>
@@ -88,7 +88,7 @@ const Blogsingle = () => {
                     <h3 className="text-4xl text-blue-950  font-bold mb-4">
                       {section.title}
                     </h3>
-                    <p className="mt-4 text-lg text-gray-500">
+                    <p className="mt-4 text-lg text-gray-500 text-left ">
                       {truncateText(section.description, 30)}
                     </p>
                   </div>

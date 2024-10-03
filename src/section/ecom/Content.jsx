@@ -65,8 +65,7 @@ export const ContentSection = styled.div`
 export const LeftBox = styled.div`
   padding: 20px;
   background-color: #f9f9f9;
-  border: 2px solid #9a77f0;
-  border-radius: 10px;
+
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 768px) {
@@ -94,7 +93,7 @@ export const ContentPara = styled.p`
   font-size: 1.1rem;
   line-height: 1.8;
   color: #071330;
-  text-align: justify;
+  text-align: left;
 
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -134,7 +133,7 @@ export const OfferBox = styled.div`
 
 export const BoxHeading = styled.h3`
   font-size: 1.5rem;
-  color: #5f47e3;
+  color:  rgba(10, 13, 80, 1);
   margin-bottom: 10px;
 
   @media (max-width: 768px) {
@@ -149,7 +148,7 @@ export const BoxHeading = styled.h3`
 export const BoxSubheading = styled.p`
   font-size: 1rem;
   color: #071330;
-
+  text-align: left;
   @media (max-width: 768px) {
     font-size: 0.9rem;
   }

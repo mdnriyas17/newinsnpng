@@ -90,7 +90,7 @@ const Ourservicepage = () => {
           Popul<span className="border-b-2 border-gray-900">ar Se</span>rvices
         </h2>
         <h1 className="text-4xl mb-4">Services to your business growth</h1>
-        <p className="text-lg leading-relaxed max-w-3xl mx-auto">
+        <p className="text-lg leading-relaxed max-w-3xl mx-auto text-center md:text-left">
           Discover how our personalized solutions can help your business thrive.
           From strategic planning to execution, make your journey to success
           smoother and more rewarding.
@@ -108,8 +108,10 @@ const Ourservicepage = () => {
               {ourservice.image}
             </div>
             <div>
-              <h3 className="text-2xl text-gray-900 mb-4">{ourservice.title}</h3>
-              <p className="text-gray-600 leading-relaxed">
+              <h3 className="text-2xl text-gray-900 mb-4">
+                {ourservice.title}
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-left	">
                 {ourservice.describtion}
               </p>
             </div>

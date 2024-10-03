@@ -1079,7 +1079,7 @@ const Description = styled.p`
   margin-top: 1rem;
   font-size: 1.125rem;
   color: #4b5563;
-  text-align: center;
+  text-align: left;
 `;
 
 const SectionContainer = styled.div`

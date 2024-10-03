@@ -152,7 +152,7 @@ const Description = styled.p`
   margin-top: 1rem;
   font-size: 1.125rem;
   color: #4b5563;
-  text-align: center;
+  text-align: left;
 `;
 
 const SectionContainer = styled.div`
@@ -208,4 +208,5 @@ const SectionTitle = styled.h2`
 const SectionContent = styled.p`
   font-size: 1rem;
   color: #374151;
+  text-align: left;
 `;

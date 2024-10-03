@@ -136,7 +136,6 @@ const FooterLogo = styled.div`
 `;
 
 const CompanyName = styled.h2`
-  font-family: "JejuGothic";
   font-size: 24px;
   font-weight: bold;
   color: black;
@@ -148,6 +147,7 @@ const CompanyName = styled.h2`
 const FooterDescription = styled.p`
   font-size: 15px;
   line-height: 1.5;
+  text-align: left;
   @media (max-width: 768px) {
     font-size: 14px;
   }

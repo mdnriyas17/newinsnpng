@@ -151,7 +151,7 @@ export const Description = styled.p`
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
-    text-align: center;
+    text-align: left;
   }
 `;
 

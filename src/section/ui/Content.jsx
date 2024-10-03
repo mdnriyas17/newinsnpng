@@ -1,6 +1,62 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const ContentSection = styled.div`
+  display: flex;
+  flex-direction: column; /* Column layout for headings */
+  align-items: center; /* Center items */
+  padding: 20px; /* Add padding for spacing */
+`;
+
+const LeftBox = styled.div`
+  width: 100%; /* Full width for the box */
+  max-width: 800px; /* Limit width for larger screens */
+  margin: 20px 0; /* Vertical margin for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Add padding inside the box */
+  background-color: rgba(10, 13, 80, 0.1); /* Light background color */
+`;
+
+const LeftHeading = styled.h2`
+  font-size: 1.8rem;
+  margin-bottom: 15px; /* Space below heading */
+  color: rgba(10, 13, 80, 1); /* Heading color */
+`;
+
+const ContentPara = styled.p`
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.6; /* Line height for readability */
+  color: #333; /* Text color */
+`;
+
+const BoxContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between boxes */
+`;
+
+const OfferBox = styled.div`
+  background-color: #fff; /* White background for service boxes */
+  padding: 15px; /* Padding inside each box */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+`;
+
+const BoxHeading = styled.h3`
+  font-size: 1.2rem; /* Heading size for service */
+  margin: 0; /* Remove default margin */
+  color: #333; /* Text color */
+`;
+
+const BoxSubheading = styled.p`
+  font-size: 0.9rem; /* Smaller size for description */
+  color: #666; /* Lighter color for description */
+  margin-top: 5px; /* Space above description */
+  text-align: left;
+`;
+
 const Content = () => {
   const services = [
     { heading: "User Research", description: "We gather insights to understand your users and their needs." },
@@ -36,119 +92,3 @@ const Content = () => {
 };
 
 export default Content;
-
-
-export const ContentSection = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-
-  @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: 768px) {
-    padding: 30px 15px;
-  }
-`;
-
-export const LeftBox = styled.div`
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 2px solid #9a77f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
-`;
-
-export const LeftHeading = styled.h2`
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #f8612b;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.5rem;
-  }
-`;
-
-export const ContentPara = styled.p`
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #071330;
-  text-align: justify;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-  }
-`;
-
-export const BoxContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-`;
-
-export const OfferBox = styled.div`
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-
-  @media (max-width: 768px) {
-    padding: 15px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 10px;
-  }
-`;
-
-export const BoxHeading = styled.h3`
-  font-size: 1.5rem;
-  color: #5f47e3;
-  margin-bottom: 10px;
-
-  @media (max-width: 768px) {
-    font-size: 1.3rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.1rem;
-  }
-`;
-
-export const BoxSubheading = styled.p`
-  font-size: 1rem;
-  color: #071330;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.85rem;
-  }
-`;

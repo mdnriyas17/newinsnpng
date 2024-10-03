@@ -75,7 +75,6 @@ const Content = styled.div`
 const StyledTitle = styled.h2`
   font-size: 2rem;
   color: #f98866;
-  font-family: "Roboto Slab";
   margin-bottom: 10px;
 `;
 

@@ -1616,6 +1616,7 @@ const SectionTitle = styled.h2`
 const SectionContent = styled.div`
   font-size: 1rem;
   color: #555;
+  text-align: left;
 `;
 
 const ListItem = styled.li`
@@ -1725,5 +1726,5 @@ const SectionContentleft1 = styled.p`
     margin-top: 1rem;
   font-size: 1.125rem;
   color: #4b5563;
-  text-align: center;
+  text-align: left;
 `;

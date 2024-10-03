@@ -236,7 +236,6 @@ const Logo = styled.div`
   span {
     font-size: 1.5rem;
     color: rgba(10, 13, 80, 1);
-    font-family: "JejuGothic";
   }
 `;
 
@@ -367,7 +366,6 @@ const FooterLogo = styled.div`
 `;
 
 const CompanyName = styled.h2`
-  font-family: "JejuGothic";
   font-size: 24px;
   font-weight: bold;
   color: black;
