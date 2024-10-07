@@ -16,7 +16,7 @@ const BlogDetail = () => {
      
     <section className="why-choose-us">
             <h5>OUR SERVICES</h5>
-            <h1>Why Choose Us</h1>
+            <h1>0 To 1000cr</h1>
         <div className="features-grid">
             <div className="image-container">
             <img src={digiimg} alt="Feature Image"/>
