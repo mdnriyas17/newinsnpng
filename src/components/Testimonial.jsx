@@ -30,7 +30,7 @@ const Blogsingle = () => {
       images: Book,
     },{
       id: 4,
-      title: "Determining the Number of People to Meet",
+      title: "How to Build a 1000 Crore Business: Proven Models, Strategies, and Tools",
       description: "To target 100 billion in sales over the next 10 years, you need to estimate the number of people to meet. This is a difficult task",
       images: Blog4img
     }
