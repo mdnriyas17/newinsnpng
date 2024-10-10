@@ -37,7 +37,7 @@ const EnquiryPage = () => {
     };
     
     axios
-      .post('https://for-zohomailer.onrender.com/email', { message: data })
+      .post('https://zohomailer.onrender.com/email', { message: data })
       .then((response) => {
         console.log(response);
         alert('Enquiry submitted successfully!');
