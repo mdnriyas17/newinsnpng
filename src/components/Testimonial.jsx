@@ -25,7 +25,7 @@ const Blogsingle = () => {
     },
     {
       id: 3,
-      title: "Why Reading Books Can Transform Your Life",
+      title: "100 Must-Read Books to transform your life: A Curated Guide for Personal Growth,Business Mastery and Financial Success",
       description:"In today's fast-paced world, where information is available at our fingertips, many people underestimate the power of reading books. But here's the truth: countless billionaires, leaders, and successful entrepreneurs credit much of their success to reading. Bill Gates, Warren Buffett, Elon Musk, and Oprah Winfrey, to name just a few, all have one thing in common—an insatiable thirst for knowledge through reading.",
       images: Book,
     },{
